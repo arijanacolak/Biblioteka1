@@ -11,8 +11,12 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
+<?import java.net.URL?>
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.detaljiOKnjiziController">
-  <columnConstraints>
+    <stylesheets>
+        <URL value="@/biblioteka.css" />
+    </stylesheets>
+    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.39996337890625" minWidth="10.0" prefWidth="41.400018310546876" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.7999755859375" minWidth="10.0" prefWidth="118.99998168945314" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.60001220703117" minWidth="10.0" prefWidth="276.6000122070312" />
@@ -90,7 +94,7 @@
             <Insets left="15.0" />
          </GridPane.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" GridPane.columnIndex="3" GridPane.rowSpan="2">
+      <Button mnemonicParsing="false" styleClass="slk" prefHeight="75.0" prefWidth="75.0" GridPane.columnIndex="3" GridPane.rowSpan="2">
          <GridPane.margin>
             <Insets left="45.0" top="10.0" />
          </GridPane.margin>

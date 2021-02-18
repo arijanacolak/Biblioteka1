@@ -11,8 +11,12 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
+<?import java.net.URL?>
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.recenzijeController">
-  <columnConstraints>
+    <stylesheets>
+        <URL value="@/biblioteka.css" />
+    </stylesheets>
+    <columnConstraints>
     <ColumnConstraints maxWidth="51.200010657310486" minWidth="4.7999876737594604" prefWidth="51.200010657310486" />
       <ColumnConstraints maxWidth="119.99996337890624" minWidth="0.0" prefWidth="0.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.80000762939454" minWidth="10.0" prefWidth="97.6" />

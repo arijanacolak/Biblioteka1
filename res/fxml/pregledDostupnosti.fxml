@@ -11,7 +11,11 @@
 <?import javafx.scene.layout.VBox?>
 
 
+<?import java.net.URL?>
 <GridPane prefHeight="362.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.pregledDostupnostiController">
+   <stylesheets>
+      <URL value="@/biblioteka.css" />
+   </stylesheets>
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="219.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="163.0" />
