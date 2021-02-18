@@ -33,11 +33,17 @@ public class pregledDostupnostiController {
         myStage.showAndWait();
     }
 
-    public void prikaziDrugiSpratAction(ActionEvent actionEvent) {
-
+    public void prikaziDrugiSpratAction(ActionEvent actionEvent) throws IOException {
+        Stage myStage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/prviSprat.fxml"));
+        Parent root = loader.load();
+        myStage.setTitle("Prvi sprat");
+        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        myStage.setResizable(false);
+        myStage.showAndWait();
     }
 
-   public void nazadAction(ActionEvent actionEvent) {
+  /* public void nazadAction(ActionEvent actionEvent) {
         ((Stage) nazadBtn.getScene().getWindow()).close();
-    }
+    }*/
 }

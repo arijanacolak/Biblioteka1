@@ -84,13 +84,13 @@
             <Insets bottom="30.0" />
          </GridPane.margin>
       </Separator>
-      <Button fx:id="nazad" onAction="#zatvoriAction" alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="95.0" text="Nazad" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-      <Button fx:id="zaduzi" onAction="#zaduziAction" alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" text="Zaduži knjigu" GridPane.columnIndex="3" GridPane.rowIndex="9">
+      <Button fx:id="nazad" alignment="CENTER" mnemonicParsing="false" onAction="#zatvoriAction" prefHeight="26.0" prefWidth="95.0" text="Nazad" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <Button fx:id="zaduzi" alignment="CENTER" mnemonicParsing="false" onAction="#zaduziAction" prefHeight="26.0" prefWidth="113.0" text="Zaduži knjigu" GridPane.columnIndex="3" GridPane.rowIndex="9">
          <GridPane.margin>
             <Insets left="15.0" />
          </GridPane.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="107.0" GridPane.columnIndex="3">
+      <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" GridPane.columnIndex="3" GridPane.rowSpan="2">
          <GridPane.margin>
             <Insets left="45.0" top="10.0" />
          </GridPane.margin>
