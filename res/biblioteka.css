@@ -1,0 +1,40 @@
+.dugmici {
+    -fx-background-color: #3e4444;
+    -fx-text-fill: white;
+}
+#d {
+    -fx-background-color: gainsboro;
+    -fx-text-fill: #3e4444;
+}
+#d1 {
+    -fx-background-color: gainsboro;
+    -fx-text-fill: #3e4444;
+}
+#d2 {
+    -fx-background-color: gainsboro;
+    -fx-text-fill: #3e4444;
+}
+#d3 {
+    -fx-background-color: gainsboro;
+    -fx-text-fill: #3e4444;
+}
+#d4 {
+    -fx-background-color: gainsboro;
+    -fx-text-fill: #3e4444;
+}
+#d5 {
+    -fx-background-color: gainsboro;
+    -fx-text-fill: #3e4444;
+}
+.labela {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+#cijeli_prozor {
+}
+#slika {
+    -fx-graphic: url("/img/logo1.png");
+}
+.slk {
+    -fx-graphic: url("/img/logo_manji.png");
+}
