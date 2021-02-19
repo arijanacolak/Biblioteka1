@@ -129,18 +129,11 @@ public class odabirKnjigeController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledDostupnosti.fxml"));
         Parent root = loader.load();
         pregledDostupnostiController noviprozor = loader.getController();
-        noviprozor.lokacijaKnjigeTxtArea.setText(" Knjiga koju ste odabrali \n ("+ tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige() + ") nalazi se\n na drugom spratu, polica B2");
+        noviprozor.lokacijaKnjigeTxtArea.setText(" Knjiga koju ste odabrali \n ("+ tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige() + ") nalazi se\n na drugom spratu, polica B2.\n Ugodno čitanje!");
         myStage.setTitle("Pregled dostupnosti");
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
-        /*Stage myStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledDostupnosti.fxml"));
-        Parent root = loader.load();
-        myStage.setTitle("Zaduzenje knjige");
-        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        myStage.setResizable(false);
-        myStage.showAndWait();*/
     }
 
     public void openPrevious(ActionEvent actionEvent) {
@@ -158,13 +151,6 @@ public class odabirKnjigeController {
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
-       /* Stage myStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/detaljiOKnjizi.fxml"));
-        Parent root = loader.load();
-        myStage.setTitle("Detalji o knjizi");
-        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        myStage.setResizable(false);
-        myStage.showAndWait();*/
     }
 
     public void pregledRecenzija(ActionEvent actionEvent) throws IOException {
@@ -178,13 +164,6 @@ public class odabirKnjigeController {
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
-       /* Stage myStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledRecenzija.fxml"));
-        Parent root = loader.load();
-        myStage.setTitle("Pregled recenzija");
-        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        myStage.setResizable(false);
-        myStage.showAndWait(); */
     }
 
     public void pretragaPoNazivu(ActionEvent actionEvent) {
