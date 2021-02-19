@@ -1,10 +1,7 @@
 package ba.unsa.etf.icr;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 public class zaduzenjeKnjigeController {
@@ -12,6 +9,7 @@ public class zaduzenjeKnjigeController {
     public TextArea podaciFld;
     public Button nazadBtn;
     public Button potvrdaBtn;
+    public Label labela;
 
     public void zaduziKnjigu(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

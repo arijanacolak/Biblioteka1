@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -18,6 +19,7 @@ public class pregledDostupnostiController {
     public Button nazadBtn;
     public ImageView slikaView;
     public Button nazad1Btn;
+    public TextArea lokacijaKnjigeTxtArea;
 
     public void actionCacelButton(ActionEvent actionEvent) {
         ((Stage) nazadBtn.getScene().getWindow()).close();

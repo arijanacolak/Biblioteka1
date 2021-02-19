@@ -38,3 +38,9 @@
 .slk {
     -fx-graphic: url("/img/logo_manji.png");
 }
+.poljeNijeIspravno {
+    -fx-background-color: lightpink;
+}
+.poljeJeIspravno {
+    -fx-background-color: yellowgreen;
+}

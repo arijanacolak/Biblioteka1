@@ -52,8 +52,8 @@
             <Insets left="10.0" top="35.0" />
          </padding>
       </Label>
-      <Label prefHeight="34.0" prefWidth="254.0" text="  Naziv knjige: Tvrđava" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Label prefHeight="30.0" prefWidth="278.0" text="  Autor: Meša Selimović " GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Label fx:id="nazivLabela" prefHeight="34.0" prefWidth="254.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Label fx:id="autorLabela" prefHeight="30.0" prefWidth="278.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
       <Label prefHeight="28.0" prefWidth="274.0" text="  Komentar:" GridPane.columnIndex="3" GridPane.rowIndex="3" />
       <Label prefHeight="44.0" prefWidth="267.0" text=" Iako je radnja romana smještena u XVII stoljeće," GridPane.columnIndex="3" GridPane.rowIndex="4" />
       <Label prefHeight="46.0" prefWidth="258.0" text=" ona prelazi okvire i vremena i prostora i " GridPane.columnIndex="3" GridPane.rowIndex="5" />

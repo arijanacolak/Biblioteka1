@@ -115,6 +115,8 @@ public class odabirKnjigeController {
         Stage myStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/zaduzenje_knjige.fxml"));
         Parent root = loader.load();
+        zaduzenjeKnjigeController noviprozor = loader.getController();
+        noviprozor.podaciFld.setText("Ime i prezime: Neko Nekić\nAdresa stanovanja: Nepoznata bb\nE-mail: neko.nekic@gmail.com\nTrenutno selektovana knjiga: " + tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige() + "\nImate pravo zadužiti još jednu knjigu!\n\nPrethodno zaduženu knjigu je potrebno vratiti za 5 dana!");
         myStage.setTitle("Zaduzenje knjige");
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
@@ -126,10 +128,19 @@ public class odabirKnjigeController {
         Stage myStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledDostupnosti.fxml"));
         Parent root = loader.load();
-        myStage.setTitle("Zaduzenje knjige");
+        pregledDostupnostiController noviprozor = loader.getController();
+        noviprozor.lokacijaKnjigeTxtArea.setText(" Knjiga koju ste odabrali \n ("+ tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige() + ") nalazi se\n na drugom spratu, polica B2");
+        myStage.setTitle("Pregled dostupnosti");
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
+        /*Stage myStage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledDostupnosti.fxml"));
+        Parent root = loader.load();
+        myStage.setTitle("Zaduzenje knjige");
+        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        myStage.setResizable(false);
+        myStage.showAndWait();*/
     }
 
     public void openPrevious(ActionEvent actionEvent) {
@@ -140,20 +151,40 @@ public class odabirKnjigeController {
         Stage myStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/detaljiOKnjizi.fxml"));
         Parent root = loader.load();
-        myStage.setTitle("Detalji o knjizi");
+        detaljiOKnjiziController noviprozor = loader.getController();
+        noviprozor.nazivKnjigeLabela.setText(" Naziv knjige: "+ tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige());
+        noviprozor.autorLabela.setText(" Autor: " + tblKnjige.getSelectionModel().getSelectedItem().getAutor());
+        myStage.setTitle("Pregled detalja");
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
+       /* Stage myStage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/detaljiOKnjizi.fxml"));
+        Parent root = loader.load();
+        myStage.setTitle("Detalji o knjizi");
+        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        myStage.setResizable(false);
+        myStage.showAndWait();*/
     }
 
     public void pregledRecenzija(ActionEvent actionEvent) throws IOException {
         Stage myStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledRecenzija.fxml"));
         Parent root = loader.load();
+        recenzijeController noviprozor = loader.getController();
+        noviprozor.nazivLabela.setText(" Naziv knjige: "+ tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige());
+        noviprozor.autorLabela.setText(" Autor: " + tblKnjige.getSelectionModel().getSelectedItem().getAutor());
         myStage.setTitle("Pregled recenzija");
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
+       /* Stage myStage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledRecenzija.fxml"));
+        Parent root = loader.load();
+        myStage.setTitle("Pregled recenzija");
+        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        myStage.setResizable(false);
+        myStage.showAndWait(); */
     }
 
     public void pretragaPoNazivu(ActionEvent actionEvent) {

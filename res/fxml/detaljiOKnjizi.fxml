@@ -46,13 +46,13 @@
          </padding>
       </Label>
       <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="8" />
-      <Label prefHeight="18.0" prefWidth="274.0" text="  Naziv knjige: Tvrđava" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label fx:id="nazivKnjigeLabela" prefHeight="18.0" prefWidth="274.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <Separator prefHeight="3.0" prefWidth="285.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets bottom="25.0" />
          </GridPane.margin>
       </Separator>
-      <Label prefHeight="0.0" prefWidth="274.0" text="  Autor: Meša Selimović" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label fx:id="autorLabela" prefHeight="0.0" prefWidth="274.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
       <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets bottom="25.0" />
