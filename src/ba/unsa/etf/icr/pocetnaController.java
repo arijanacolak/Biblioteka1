@@ -74,4 +74,26 @@ public class pocetnaController {
         myStage.setResizable(false);
         myStage.showAndWait();
     }
+
+    public void provjeraDostupnostiAction(ActionEvent actionEvent) throws IOException {
+        KnjigeModel model = new KnjigeModel();
+        model.napuni();
+        pregledDostupnostiPocetnaController ctrl = new pregledDostupnostiPocetnaController(model);
+        Stage myStage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledDostupnostiKnjiga.fxml"));
+        loader.setController(ctrl);
+        Parent root = loader.load();
+        myStage.setTitle("Pregled dostupnosti knjiga");
+        //myStage.initOwner(tbAddOwner.getScene().getWindow());
+        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        myStage.setResizable(false);
+        myStage.showAndWait();
+       /* Stage myStage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledDostupnostiKnjiga.fxml"));
+        Parent root = loader.load();
+        myStage.setTitle("Pregled dostupnosti");
+        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        myStage.setResizable(false);
+        myStage.showAndWait();*/
+    }
 }
