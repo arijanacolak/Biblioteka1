@@ -6,6 +6,9 @@ public class Knjiga {
     private String nazivKnjige, autor, kategorija, izdavac, izdavanje, jezik;
     private Integer id, isbn, font;
 
+        public Knjiga(){
+
+        }
     public Knjiga(Integer id, String nazivKnjige, String autor, String kategorija, String izdavac, String izdavanje, String jezik, Integer isbn, Integer font) {
         this.nazivKnjige = nazivKnjige;
         this.autor = autor;

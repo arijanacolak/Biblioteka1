@@ -11,6 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -73,6 +74,39 @@ public class knjigeZaBrisanjeUredjivanjeController {
     }
 
     public void obrisiKnjiguAction(ActionEvent actionEvent) {
+        if(tblKnjige.getSelectionModel().getSelectedItem() != null){
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Potvrda");
+            alert.setHeaderText("Da li ste sigurni da želite obrisati knjigu?");
+            alert.setContentText("Pritisnite OK ako jeste!");
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK){
+                ObservableList<Knjiga> primjer = model.getKnjige();
+                Knjiga knjigaZaRemove = new Knjiga();
+                for (Knjiga knjiga: primjer) {
+                    if(knjiga.equals(tblKnjige.getSelectionModel().getSelectedItem())) knjigaZaRemove = knjiga;
+                }
+               model.getKnjige().remove(knjigaZaRemove);
+                Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
+                alert1.setTitle("Potvrda");
+                alert1.setHeaderText(null);
+                alert1.setContentText("Uspješno ste obrisali selektovanu knjigu!");
+
+                alert1.showAndWait();
+            } else {
+                alert.showAndWait();
+            }
+
+        }
+        else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Niste selektovali knjigu.");
+            alert.setContentText("Da biste otvorili ovaj prozor, potrebno je da selektujete željenu knjigu!");
+            alert.showAndWait();
+        }
+
     }
 
     public void nazadAction(ActionEvent actionEvent) {
