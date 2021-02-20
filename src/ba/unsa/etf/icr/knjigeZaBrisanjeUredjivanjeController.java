@@ -6,10 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -46,13 +43,33 @@ public class knjigeZaBrisanjeUredjivanjeController {
     }
 
     public void urediKnjiguAction(ActionEvent actionEvent) throws IOException {
-        Stage myStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/urediKnjigu.fxml"));
-        Parent root = loader.load();
-        myStage.setTitle("Uredite podatke o knjizi");
-        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        myStage.setResizable(false);
-        myStage.showAndWait();
+        if(tblKnjige.getSelectionModel().getSelectedItem() != null) {
+            Stage myStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/urediKnjigu.fxml"));
+            Parent root = loader.load();
+            urediKnjiguController podaci = loader.getController();
+
+            podaci.fldNazivKnjige.setText(tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige());
+            podaci.fldAutorKnjige.setText(tblKnjige.getSelectionModel().getSelectedItem().getAutor());
+            podaci.fldKategorija.setText(tblKnjige.getSelectionModel().getSelectedItem().getKategorija());
+            podaci.fldFont.setText(tblKnjige.getSelectionModel().getSelectedItem().getFont().toString());
+            podaci.fldISBN.setText(tblKnjige.getSelectionModel().getSelectedItem().getIsbn().toString());
+            podaci.fldIzdavac.setText(tblKnjige.getSelectionModel().getSelectedItem().getIzdavac());
+            podaci.fldIzdanje.setText(tblKnjige.getSelectionModel().getSelectedItem().getIzdavanje());
+            podaci.fldJezik.setText(tblKnjige.getSelectionModel().getSelectedItem().getJezik());
+
+            myStage.setTitle("Uredite podatke o knjizi");
+            myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            myStage.setResizable(false);
+            myStage.showAndWait();
+        }
+        else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Niste selektovali knjigu.");
+            alert.setContentText("Da biste otvorili ovaj prozor, potrebno je da selektujete željenu knjigu!");
+            alert.showAndWait();
+        }
     }
 
     public void obrisiKnjiguAction(ActionEvent actionEvent) {

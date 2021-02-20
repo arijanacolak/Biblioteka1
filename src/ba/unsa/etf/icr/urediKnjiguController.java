@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.util.Optional;
@@ -12,6 +13,14 @@ public class urediKnjiguController {
     public Button btnNazad;
     public Button btnObrisiKnjigu;
     public Button btnSpasiPromjene;
+    public TextField fldNazivKnjige;
+    public TextField fldAutorKnjige;
+    public TextField fldISBN;
+    public TextField fldKategorija;
+    public TextField fldIzdavac;
+    public TextField fldIzdanje;
+    public TextField fldJezik;
+    public TextField fldFont;
 
     public void nazad(ActionEvent actionEvent) {
         ((Stage) btnNazad.getScene().getWindow()).close();

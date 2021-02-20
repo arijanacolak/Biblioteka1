@@ -84,7 +84,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="26.0" prefWidth="151.0">
+                  <TextField fx:id="fldNazivKnjige" prefHeight="26.0" prefWidth="151.0">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -98,7 +98,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="26.0" prefWidth="151.0">
+                  <TextField fx:id="fldAutorKnjige" prefHeight="26.0" prefWidth="151.0">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -112,7 +112,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="26.0" prefWidth="151.0">
+                  <TextField fx:id="fldISBN" prefHeight="26.0" prefWidth="151.0">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -126,7 +126,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="26.0" prefWidth="151.0">
+                  <TextField fx:id="fldKategorija" prefHeight="26.0" prefWidth="151.0">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -140,7 +140,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="26.0" prefWidth="151.0">
+                  <TextField fx:id="fldIzdavac" prefHeight="26.0" prefWidth="151.0">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -154,7 +154,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="26.0" prefWidth="151.0">
+                  <TextField fx:id="fldIzdanje" prefHeight="26.0" prefWidth="151.0">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -168,7 +168,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="26.0" prefWidth="151.0">
+                  <TextField fx:id="fldJezik" prefHeight="26.0" prefWidth="151.0">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -182,7 +182,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="26.0" prefWidth="151.0">
+                  <TextField fx:id="fldFont" prefHeight="26.0" prefWidth="151.0">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
