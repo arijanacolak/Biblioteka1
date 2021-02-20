@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.obrisiKorisnikaController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+
+  </rowConstraints>
+   <children>
+       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="5">
+           <children>
+               <MenuBar>
+                   <menus>
+                       <Menu mnemonicParsing="false" text="Registracija korisnika">
+                           <items>
+                               <MenuItem mnemonicParsing="false" text="Close" />
+                           </items>
+                       </Menu>
+                       <Menu mnemonicParsing="false" text="Registracija knjige">
+                           <items>
+                               <MenuItem mnemonicParsing="false" text="Delete" />
+                           </items>
+                       </Menu>
+                       <Menu mnemonicParsing="false" text="Odabir knjige">
+                           <items>
+                               <MenuItem mnemonicParsing="false" text="About" />
+                           </items>
+                       </Menu>
+                       <Menu mnemonicParsing="false" text="Provjera dostupnosti knjige">
+                           <items>
+                               <MenuItem mnemonicParsing="false" text="Action 1" />
+                           </items>
+                       </Menu>
+                       <Menu mnemonicParsing="false" text="Historija zaduženja">
+                           <items>
+                               <MenuItem mnemonicParsing="false" text="Action 1" />
+                           </items>
+                       </Menu>
+                       <Menu mnemonicParsing="false" text="Uredi podatke">
+                           <items>
+                               <MenuItem mnemonicParsing="false" text="Action 1" />
+                           </items>
+                       </Menu>
+                   </menus>
+               </MenuBar>
+           </children>
+       </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="1">
+         <children>
+            <TextField promptText="Pretraga po id">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField promptText="Pretraga po imenu">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="6">
+        <columns>
+          <TableColumn minWidth="50.0" prefWidth="50.0" text="id" />
+          <TableColumn prefWidth="200.0" text="Ime i Prezime" />
+            <TableColumn prefWidth="130.0" text="E-mail" />
+        </columns>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </TableView>
+      <Button fx:id="btnNazad" mnemonicParsing="false" onAction="#nazadAction" prefWidth="100.0" text="Nazad" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Button>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="2147483647">
+         <children>
+            <Button fx:id="btnDetaljniPrikazPodatakaOKorisniku" mnemonicParsing="false" onAction="#detaljniPrikazPodatakaAction" prefHeight="32.0" prefWidth="180.0" text="Detaljni prikaz podataka">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#obrisiKorisnikaAction" prefHeight="32.0" prefWidth="180.0" text="Obriši korisnika">
+               <VBox.margin>
+                  <Insets left="40.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children></VBox>
+
+   </children>
+</GridPane>
