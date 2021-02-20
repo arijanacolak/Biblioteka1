@@ -41,23 +41,38 @@ public class obrisiKorisnikaController {
 
     //potrebno dodati uslov da je selektovan korisnik iz tabele
     public void obrisiKorisnikaAction(ActionEvent actionEvent) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Potvrda");
-        alert.setHeaderText("Potvrda o brisanju selektovanog korisnika.");
-        alert.setContentText("Jeste li sigurni da želite obrisati selektovanog korisnika?");
+        if (tableKorisnici.getSelectionModel().getSelectedItem() != null) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Potvrda");
+            alert.setHeaderText("Potvrda o brisanju selektovanog korisnika.");
+            alert.setContentText("Jeste li sigurni da želite obrisati selektovanog korisnika?");
 
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK){
-            Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
-            alert1.setTitle("Potvrda");
-            alert1.setHeaderText("Korisnik uspješno obrisan.");
-            Optional<ButtonType> result1 = alert1.showAndWait();
+            Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK) {
+                Korisnik korisnik =  new Korisnik();
+                for (Korisnik x: model.getKorisnici()) {
+                    if(tableKorisnici.getSelectionModel().getSelectedItem().equals(x)) korisnik = x;
+                }
+
+                model.getKorisnici().remove(korisnik);
+                Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
+                alert1.setTitle("Potvrda");
+                alert1.setHeaderText("Korisnik uspješno obrisan.");
+                Optional<ButtonType> result1 = alert1.showAndWait();
+                if (result.get() == ButtonType.OK) {
+                    alert.close();
+                }
+                alert.close();
+            } else {
                 alert.close();
             }
-            alert.close();
-        } else {
-            alert.close();
+        }
+        else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Niste selektovali korisnika!");
+            alert.setContentText("Potrebno je da selektujete željenog korisnika za ovu vrstu akcije!");
+            alert.showAndWait();
         }
     }
 }
