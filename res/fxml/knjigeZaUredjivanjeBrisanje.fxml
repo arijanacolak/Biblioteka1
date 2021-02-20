@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.knjigeZaBrisanjeUredjivanjeController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@/biblioteka.css" />
     </stylesheets>
@@ -76,9 +76,9 @@
         </VBox>
         <TableView fx:id="tblKnjige" prefHeight="295.0" prefWidth="523.0" GridPane.columnSpan="4" GridPane.rowIndex="3" GridPane.rowSpan="6">
             <columns>
-                <TableColumn prefWidth="161.0" text="Naziv" />
-                <TableColumn prefWidth="161.0" text="Autor" />
-                <TableColumn prefWidth="161.0" text="Jezik" />
+                <TableColumn fx:id="columnNaziv" prefWidth="161.0" text="Naziv" />
+                <TableColumn fx:id="columnAutor" prefWidth="161.0" text="Autor" />
+                <TableColumn fx:id="columnJezik" prefWidth="161.0" text="Jezik" />
             </columns>
             <GridPane.margin>
                 <Insets bottom="20.0" left="40.0" right="70.0" top="10.0" />

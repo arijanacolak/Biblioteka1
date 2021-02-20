@@ -26,10 +26,15 @@ public class urediPodatkePocetnaController {
     }
 
     public void urediPodatkeOKnjizi(ActionEvent actionEvent) throws IOException {
+        KnjigeModel model = new KnjigeModel();
+        model.napuni();
+        knjigeZaBrisanjeUredjivanjeController ctrl = new knjigeZaBrisanjeUredjivanjeController(model);
         Stage myStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/knjigeZaUredjivanjeBrisanje.fxml"));
+        loader.setController(ctrl);
         Parent root = loader.load();
         myStage.setTitle("Spisak knjiga");
+        //myStage.initOwner(tbAddOwner.getScene().getWindow());
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
