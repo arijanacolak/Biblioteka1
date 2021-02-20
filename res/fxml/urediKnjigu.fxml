@@ -191,19 +191,19 @@
             </HBox>
          </children>
       </VBox>
-      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Nazad" GridPane.rowIndex="8">
+      <Button fx:id="btnNazad" mnemonicParsing="false" onAction="#nazad" prefHeight="25.0" prefWidth="73.0" text="Nazad" GridPane.rowIndex="8">
          <GridPane.margin>
             <Insets left="50.0" top="20.0" />
          </GridPane.margin>
       </Button>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="5" GridPane.rowSpan="2">
          <children>
-            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="150.0" text="Spasi promjene">
+            <Button fx:id="btnSpasiPromjene" mnemonicParsing="false" onAction="#spasiPromjeneAction" prefHeight="32.0" prefWidth="150.0" text="Spasi promjene">
                <VBox.margin>
                   <Insets left="20.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="150.0" text="Obriši knjigu">
+            <Button fx:id="btnObrisiKnjigu" mnemonicParsing="false" onAction="#obrisiKnjiguAction" prefHeight="32.0" prefWidth="150.0" text="Obriši knjigu">
                <VBox.margin>
                   <Insets left="20.0" top="20.0" />
                </VBox.margin>

@@ -94,7 +94,7 @@
             </Button>
          </children>
       </VBox>
-      <Button fx:id="btnNazad" mnemonicParsing="false" prefWidth="100.0" text="Nazad" GridPane.columnSpan="2" GridPane.rowIndex="5">
+      <Button fx:id="btnNazad" mnemonicParsing="false" onAction="#nazad" prefWidth="100.0" text="Nazad" GridPane.columnSpan="2" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets left="50.0" top="50.0" />
          </GridPane.margin>

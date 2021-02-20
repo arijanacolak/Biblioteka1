@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -11,6 +12,8 @@ import java.io.IOException;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class urediPodatkePocetnaController {
+
+    public Button btnNazad;
 
     public void urediPodatkeOKorisniku(ActionEvent actionEvent) throws IOException {
         Stage myStage = new Stage();
@@ -36,5 +39,9 @@ public class urediPodatkePocetnaController {
     }
 
     public void obrisiKnjigu(ActionEvent actionEvent) {
+    }
+
+    public void nazad(ActionEvent actionEvent) {
+        ((Stage) btnNazad.getScene().getWindow()).close();
     }
 }
