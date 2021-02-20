@@ -64,4 +64,14 @@ public class pocetnaController {
     public void openPrevious(ActionEvent actionEvent) {
         ((Stage) nazadBtn.getScene().getWindow()).close();
     }
+
+    public void urediPodatke(ActionEvent actionEvent) throws IOException {
+        Stage myStage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/urediPodatkePocetna.fxml"));
+        Parent root = loader.load();
+        myStage.setTitle("Uredite podatke");
+        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        myStage.setResizable(false);
+        myStage.showAndWait();
+    }
 }
