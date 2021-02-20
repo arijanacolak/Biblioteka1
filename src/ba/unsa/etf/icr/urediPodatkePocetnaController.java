@@ -27,9 +27,9 @@ public class urediPodatkePocetnaController {
 
     public void urediPodatkeOKnjizi(ActionEvent actionEvent) throws IOException {
         Stage myStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/urediKnjigu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/knjigeZaUredjivanjeBrisanje.fxml"));
         Parent root = loader.load();
-        myStage.setTitle("Uredite podatke o knjizi");
+        myStage.setTitle("Spisak knjiga");
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
@@ -45,7 +45,14 @@ public class urediPodatkePocetnaController {
         myStage.showAndWait();
     }
 
-    public void obrisiKnjigu(ActionEvent actionEvent) {
+    public void obrisiKnjigu(ActionEvent actionEvent) throws IOException {
+        Stage myStage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/knjigeZaUredjivanjeBrisanje.fxml"));
+        Parent root = loader.load();
+        myStage.setTitle("Spisak knjiga");
+        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        myStage.setResizable(false);
+        myStage.showAndWait();
     }
 
     public void nazad(ActionEvent actionEvent) {
