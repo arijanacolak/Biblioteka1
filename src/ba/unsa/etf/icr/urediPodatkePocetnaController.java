@@ -41,10 +41,15 @@ public class urediPodatkePocetnaController {
     }
 
     public void obrisiKorisnika(ActionEvent actionEvent) throws IOException {
+        KorisnikModel model = new KorisnikModel();
+        model.napuni();
+        obrisiKorisnikaController ctrl = new obrisiKorisnikaController(model);
         Stage myStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/obrisiKorisnika.fxml"));
+        loader.setController(ctrl);
         Parent root = loader.load();
-        myStage.setTitle("Brisanje korisnika");
+        myStage.setTitle("Spisak korisnika");
+        //myStage.initOwner(tbAddOwner.getScene().getWindow());
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();

@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.obrisiKorisnikaController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -80,11 +80,11 @@
             </TextField>
          </children>
       </HBox>
-      <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="6">
+      <TableView fx:id="tableKorisnici" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="6">
         <columns>
-          <TableColumn minWidth="50.0" prefWidth="50.0" text="id" />
-          <TableColumn prefWidth="200.0" text="Ime i Prezime" />
-            <TableColumn prefWidth="130.0" text="E-mail" />
+          <TableColumn fx:id="columnId" minWidth="50.0" prefWidth="50.0" text="id" />
+          <TableColumn fx:id="columnIme" prefWidth="200.0" text="Ime i Prezime" />
+            <TableColumn fx:id="columMail" prefWidth="130.0" text="E-mail" />
         </columns>
          <GridPane.margin>
             <Insets left="20.0" />

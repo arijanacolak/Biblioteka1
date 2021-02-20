@@ -3,15 +3,30 @@ package ba.unsa.etf.icr;
 import java.time.LocalDate;
 
 public class Korisnik {
-    private String ime, prezime, imeRoditelja, adresaPrebivalista, mjestoRodjenja, mjestoPrebivalista;
-    private Integer jmbg, postanskiBroj;
+    private String ime, prezime, email, imeRoditelja, adresaPrebivalista, mjestoRodjenja, mjestoPrebivalista;
+    private Integer jmbg, postanskiBroj, id;
     private LocalDate datumRodjenja;
 
     public Korisnik() {}
 
-    public Korisnik(String ime, String prezime, String imeRoditelja, String adresaPrebivalista, String mjestoRodjenja, String mjestoPrebivalista, Integer jmbg, Integer postanskiBroj, LocalDate datumRodjenja) {
+    public Korisnik(Integer id, String ime, String prezime, String email, String imeRoditelja, String adresaPrebivalista, String mjestoRodjenja, String mjestoPrebivalista, Integer jmbg, Integer postanskiBroj, LocalDate datumRodjenja) {
+        this.id = id;
         this.ime = ime;
         this.prezime = prezime;
+        this.email = email;
+        this.imeRoditelja = imeRoditelja;
+        this.adresaPrebivalista = adresaPrebivalista;
+        this.mjestoRodjenja = mjestoRodjenja;
+        this.mjestoPrebivalista = mjestoPrebivalista;
+        this.jmbg = jmbg;
+        this.postanskiBroj = postanskiBroj;
+        this.datumRodjenja = datumRodjenja;
+    }
+    public Korisnik(Integer id, String ime, String prezime, String imeRoditelja, String adresaPrebivalista, String mjestoRodjenja, String mjestoPrebivalista, Integer jmbg, Integer postanskiBroj, LocalDate datumRodjenja) {
+        this.id = id;
+        this.ime = ime;
+        this.prezime = prezime;
+        this.email = "";
         this.imeRoditelja = imeRoditelja;
         this.adresaPrebivalista = adresaPrebivalista;
         this.mjestoRodjenja = mjestoRodjenja;
@@ -91,5 +106,21 @@ public class Korisnik {
 
     public void setDatumRodjenja(LocalDate datumRodjenja) {
         this.datumRodjenja = datumRodjenja;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
