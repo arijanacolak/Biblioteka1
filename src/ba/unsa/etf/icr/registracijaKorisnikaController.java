@@ -1,5 +1,7 @@
 package ba.unsa.etf.icr;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -19,6 +21,13 @@ public class registracijaKorisnikaController {
     public TextField surnameField;
     public TextField nameField;
 
+    public void initialize(){
+        ObservableList<String> gradovi = FXCollections.observableArrayList();
+        gradovi.addAll("Sarajevo", "Mostar", "Bihać", "Banja Luka", "Konjic");
+
+        addressPlace.setItems(gradovi);
+        placeOfBirth.setItems(gradovi);
+    }
     public void actionOkButton(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Potvrdi");

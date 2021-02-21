@@ -1,5 +1,6 @@
 package ba.unsa.etf.icr;
 
+import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,6 +22,22 @@ public class registracijaKnjigeController {
     public Button okButton;
     public Button cancelButton;
 
+    public void initialize(){
+
+        ObservableList<String> kategorija = FXCollections.observableArrayList();
+        kategorija.addAll("roman", "drama", "triler", "horor");
+        kategorijaComboBox.setItems(kategorija);
+
+        ObservableList<String> jezik = FXCollections.observableArrayList();
+        jezik.addAll("bs", "en");
+        jezikComboBox.setItems(jezik);
+
+        ObservableList<String> font = FXCollections.observableArrayList();
+        font.addAll("12", "13", "15", "20");
+        fontComboBox.setItems(font);
+
+
+    }
     /*public Button okButton;
         public TextField postalNumberField;
         public ComboBox addressPlace;
