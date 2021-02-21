@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -7,9 +8,9 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<?import java.net.URL?>
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.dodajKOmentarController">
     <stylesheets>
         <URL value="@/biblioteka.css" />
@@ -43,10 +44,13 @@
             <Insets left="10.0" />
          </GridPane.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="slk" GridPane.columnIndex="3">
+      <VBox GridPane.columnIndex="3">
          <GridPane.margin>
             <Insets left="45.0" top="10.0" />
          </GridPane.margin>
-      </Button>
+         <children>
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="slk" />
+         </children>
+      </VBox>
    </children>
 </GridPane>

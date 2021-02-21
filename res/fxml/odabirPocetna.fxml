@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<GridPane id="cijeli_prozor" alignment="center" hgap="10" prefHeight="529.0" prefWidth="668.0" stylesheets="" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.pocetnaController">
+<GridPane id="cijeli_prozor" alignment="center" hgap="10" prefHeight="529.0" prefWidth="668.0" stylesheets="" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.pocetnaController">
    <stylesheets>
       <URL value="@/biblioteka.css" />
    </stylesheets>
@@ -38,7 +41,7 @@
    </rowConstraints>
    <children>
       <Button fx:id="registracijaKorisnikabtn" mnemonicParsing="false" onAction="#registracijaKorisnika" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Registracija korisnika" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-      <Label id="labela" prefHeight="58.0" prefWidth="581.0" styleClass="labela" text="Odaberite željenu opciju:" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2">
+      <Label id="labela" prefHeight="40.0" prefWidth="580.0" styleClass="labela" text="Odaberite željenu opciju:" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2">
          <padding>
             <Insets left="15.0" top="10.0" />
          </padding>
@@ -54,8 +57,8 @@
       </Label>
       <Button fx:id="registracijaKnjigeBtn" mnemonicParsing="false" onAction="#registracijaKnjige" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Registracija knjige" GridPane.columnIndex="4" GridPane.rowIndex="10" />
       <Button fx:id="odabirKnjigeBtn" mnemonicParsing="false" onAction="#openBooks" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Odabir knjige" GridPane.columnIndex="4" GridPane.rowIndex="11" />
-      <Button fx:id="provjeraDostupnostiKnjigeBtn" onAction="#provjeraDostupnostiAction" mnemonicParsing="false" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Provjera dostupnosti knjige" GridPane.columnIndex="4" GridPane.rowIndex="12" />
-      <Button fx:id="provjeraHistorijeZaduzenjaBtn" onAction="#historijaZaduzenjaAction" mnemonicParsing="false" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Provjera historije zaduženja" GridPane.columnIndex="4" GridPane.rowIndex="13" />
+      <Button fx:id="provjeraDostupnostiKnjigeBtn" mnemonicParsing="false" onAction="#provjeraDostupnostiAction" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Provjera dostupnosti knjige" GridPane.columnIndex="4" GridPane.rowIndex="12" />
+      <Button fx:id="provjeraHistorijeZaduzenjaBtn" mnemonicParsing="false" onAction="#historijaZaduzenjaAction" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Provjera historije zaduženja" GridPane.columnIndex="4" GridPane.rowIndex="13" />
       <Button fx:id="urediPodatkeBtn" mnemonicParsing="false" onAction="#urediPodatke" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Uredi podatke " GridPane.columnIndex="4" GridPane.rowIndex="14" />
       <Button id="d" fx:id="nazadBtn" mnemonicParsing="false" onAction="#openPrevious" prefHeight="36.0" prefWidth="80.0" text="Nazad" GridPane.columnIndex="1" GridPane.rowIndex="15" />
       <Button id="slika" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.rowSpan="6">
