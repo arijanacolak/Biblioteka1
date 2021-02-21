@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@/biblioteka.css" />
     </stylesheets>
@@ -67,38 +58,14 @@
          </children>
       </VBox>
       <Button id="d1" fx:id="btnProvjeri" onAction="#provjeriAction" prefHeight="36.0" prefWidth="80.0" text="Provjeri" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-      <MenuBar prefHeight="36.0" prefWidth="738.0" GridPane.columnSpan="6">
+      <MenuBar cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="36.0" prefWidth="738.0" scaleShape="false" GridPane.columnSpan="6">
          <menus>
-            <Menu mnemonicParsing="false" text="Registracija korisnika">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Close" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Registracija knjige">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Odabir knjige">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Provjera dostupnosti knjige">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Historija zaduženja">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Uredi podatke">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
-               </items>
-            </Menu>
+            <Menu mnemonicParsing="false" text="Registracija korisnika" />
+            <Menu mnemonicParsing="false" text="Registracija knjige" />
+            <Menu mnemonicParsing="false" text="Odabir knjige" />
+            <Menu mnemonicParsing="false" text="Provjera dostupnosti knjige" />
+            <Menu id="id1" mnemonicParsing="false" text="Historija zaduženja" />
+            <Menu mnemonicParsing="false" text="Uredi podatke" />
          </menus>
       </MenuBar>
    </children>

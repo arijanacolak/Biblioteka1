@@ -50,3 +50,11 @@
 .qr{
 -fx-graphic: url("/img/QR_scanner.png");
 }
+
+#id1{
+    -fx-background-color:#a9a9a9;
+}
+
+.boja{
+    -fx-background-color:#a9a9a9;
+}
