@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="100.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.registracijaKnjigeController">
+<AnchorPane prefHeight="100.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.registracijaKnjigeController">
    <children>
       <GridPane fx:id="prozor" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="461.0">
          <stylesheets>
@@ -148,7 +148,7 @@
                <children>
                   <Button minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="slk">
                      <VBox.margin>
-                        <Insets right="5.0" />
+                        <Insets right="5.0" top="5.0" />
                      </VBox.margin>
                   </Button>
                </children>

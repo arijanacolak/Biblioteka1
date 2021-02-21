@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@/biblioteka.css" />
     </stylesheets>
@@ -55,12 +55,15 @@
          </padding>
       </Label>
       <Button id="d1" fx:id="btnNazad" mnemonicParsing="false" prefHeight="34.0" prefWidth="86.0" text="Nazad" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-      <VBox GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.rowSpan="2">
+      <VBox GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.rowSpan="3">
          <GridPane.margin>
             <Insets left="30.0" top="15.0" />
          </GridPane.margin>
          <children>
-            <Button id="slika1" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="slk" />
+            <Button id="slika1" minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="slk">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin></Button>
          </children>
       </VBox>
       <Button id="d1" fx:id="btnNazad1" prefHeight="34.0" prefWidth="86.0" text="Provjeri" GridPane.columnIndex="5" GridPane.rowIndex="7" />
