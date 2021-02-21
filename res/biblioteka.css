@@ -44,3 +44,9 @@
 .poljeJeIspravno {
     -fx-background-color: yellowgreen;
 }
+.upitnik{
+-fx-graphic: url("/img/upitnik.png");
+}
+.qr{
+-fx-graphic: url("/img/QR_scanner.png");
+}

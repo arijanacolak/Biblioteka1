@@ -38,8 +38,8 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="41.5999755859375" minHeight="10.0" prefHeight="41.5999755859375" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="29.60002441406249" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
         <HBox minHeight="30.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="5" GridPane.rowIndex="2">
@@ -96,7 +96,7 @@
         </TableView>
         <HBox prefHeight="35.0" prefWidth="317.0" GridPane.columnSpan="2" GridPane.rowIndex="9">
             <children>
-                <Button id="d1" fx:id="btnNazad" mnemonicParsing="false" onAction="#nazadAction" prefHeight="34.0" prefWidth="86.0" text="Nazad">
+                <Button id="d1" fx:id="btnNazad" mnemonicParsing="false" onAction="#nazadAction" prefHeight="36.0" prefWidth="80.0" text="Nazad">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>

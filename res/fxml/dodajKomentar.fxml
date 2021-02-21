@@ -19,8 +19,8 @@
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.20001220703125" minWidth="10.0" prefWidth="36.80001220703125" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="344.79998779296875" minWidth="10.0" prefWidth="131.99998779296874" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.79998779296875" minWidth="10.0" prefWidth="260.5999633789063" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.40004882812497" minWidth="10.0" prefWidth="82.39995117187493" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.5999755859375" minWidth="10.0" prefWidth="91.20004882812498" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.40004882812497" minWidth="10.0" prefWidth="67.19996337890626" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.5999755859375" minWidth="10.0" prefWidth="105.6000366210938" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -38,10 +38,10 @@
             <Insets left="5.0" top="35.0" />
          </padding>
       </Label>
-      <Button fx:id="nazad" alignment="CENTER" mnemonicParsing="false" onAction="#nazadAction" prefHeight="26.0" prefWidth="95.0" text="Nazad" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Button fx:id="potvrdi" alignment="CENTER" mnemonicParsing="false" onAction="#potvrdiAction" prefHeight="26.0" prefWidth="119.0" text="Potvrdi" GridPane.columnIndex="4" GridPane.rowIndex="3">
+      <Button fx:id="nazad" alignment="CENTER" mnemonicParsing="false" onAction="#nazadAction" prefHeight="36.0" prefWidth="80.0" text="Nazad" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="potvrdi" alignment="CENTER" mnemonicParsing="false" onAction="#potvrdiAction" prefHeight="36.0" prefWidth="96.0" text="Potvrdi" GridPane.columnIndex="4" GridPane.rowIndex="3">
          <GridPane.margin>
-            <Insets right="5.0" />
+            <Insets right="25.0" />
          </GridPane.margin>
       </Button>
       <VBox prefHeight="74.0" prefWidth="96.0" GridPane.columnIndex="4">
@@ -49,7 +49,10 @@
             <Insets left="1.0" top="10.0" />
          </GridPane.margin>
          <children>
-            <Button minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="slk" />
+            <Button minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="slk">
+               <VBox.margin>
+                  <Insets left="15.0" />
+               </VBox.margin></Button>
          </children>
       </VBox>
    </children>

@@ -34,8 +34,8 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="39.99997558593748" minHeight="10.0" prefHeight="39.99997558593748" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="25.600012207031227" minHeight="10.0" prefHeight="20.800024414062477" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <TableView fx:id="tblKnjige" prefHeight="322.0" prefWidth="558.0" GridPane.columnSpan="4" GridPane.rowIndex="3" GridPane.rowSpan="5">
@@ -48,7 +48,7 @@
             <Insets bottom="20.0" left="40.0" right="70.0" top="10.0" />
          </GridPane.margin>
       </TableView>
-      <Button id="d1" fx:id="btnNazad" mnemonicParsing="false" onAction="#openPrevious" prefHeight="34.0" prefWidth="86.0" text="Nazad" GridPane.rowIndex="8">
+      <Button id="d1" fx:id="btnNazad" mnemonicParsing="false" onAction="#openPrevious" prefHeight="36.0" prefWidth="80.0" text="Nazad" GridPane.rowIndex="8">
          <GridPane.margin>
             <Insets left="50.0" />
          </GridPane.margin>
@@ -80,7 +80,7 @@
             <Insets left="15.0" />
          </GridPane.margin>
       </TextField>
-      <Button fx:id="btnZaduziKnjigu" mnemonicParsing="false" onAction="#zaduziKnjigu" prefHeight="34.0" prefWidth="115.0" styleClass="dugmici" text="Zaduži knjigu" GridPane.columnIndex="4" GridPane.rowIndex="8">
+      <Button fx:id="btnZaduziKnjigu" mnemonicParsing="false" onAction="#zaduziKnjigu" prefHeight="36.0" prefWidth="96.0" styleClass="dugmici" text="Zaduži knjigu" GridPane.columnIndex="4" GridPane.rowIndex="8">
          <font>
             <Font size="11.0" />
          </font>

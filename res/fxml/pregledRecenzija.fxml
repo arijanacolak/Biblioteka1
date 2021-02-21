@@ -63,7 +63,7 @@
       <Label prefHeight="18.0" prefWidth="346.0" text=" pokazuje vječne dileme čovjeka koji promišlja" GridPane.columnIndex="3" GridPane.rowIndex="6" />
       <Label prefHeight="18.0" prefWidth="258.0" text=" o smislu života." GridPane.columnIndex="3" GridPane.rowIndex="7" />
       <Button fx:id="dodajKomentarBtn" mnemonicParsing="false" onAction="#dodajKomentarAction" prefHeight="26.0" prefWidth="270.0" text="Dodaj komentar" GridPane.columnIndex="3" GridPane.rowIndex="10" />
-      <Button fx:id="nazad" alignment="CENTER" mnemonicParsing="false" onAction="#nazadAction" prefHeight="26.0" prefWidth="95.0" text="Nazad" GridPane.columnIndex="2" GridPane.rowIndex="11">
+      <Button fx:id="nazad" alignment="CENTER" mnemonicParsing="false" onAction="#nazadAction" prefHeight="36.0" prefWidth="80.0" text="Nazad" GridPane.columnIndex="2" GridPane.rowIndex="11">
          <GridPane.margin>
             <Insets />
          </GridPane.margin></Button>

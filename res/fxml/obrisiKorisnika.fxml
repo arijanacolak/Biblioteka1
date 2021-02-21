@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@/biblioteka.css" />
     </stylesheets>
@@ -36,8 +36,8 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="51.19998779296873" minHeight="10.0" prefHeight="51.19998779296873" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="37.60001220703123" minHeight="10.0" prefHeight="33.60001220703123" vgrow="SOMETIMES" />
 
 
   </rowConstraints>
@@ -104,7 +104,7 @@
             <Insets left="20.0" />
          </GridPane.margin>
       </TableView>
-      <Button fx:id="btnNazad" mnemonicParsing="false" onAction="#nazadAction" prefWidth="100.0" text="Nazad" GridPane.rowIndex="8">
+      <Button fx:id="btnNazad" mnemonicParsing="false" onAction="#nazadAction" prefHeight="36.0" prefWidth="80.0" text="Nazad" GridPane.rowIndex="8">
          <GridPane.margin>
             <Insets left="20.0" top="10.0" />
          </GridPane.margin>
