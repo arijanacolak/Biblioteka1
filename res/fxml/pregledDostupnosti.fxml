@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 
 <GridPane prefHeight="362.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.pregledDostupnostiController">
    <stylesheets>
@@ -39,10 +40,17 @@
             </Button>
          </children>
       </VBox>
-      <Label prefHeight="28.0" prefWidth="134.0" text="Dostupnost knjige:" GridPane.rowIndex="1">
+      <Label id="labela" prefHeight="42.0" prefWidth="362.0" styleClass="labela" text="   Dostupnost knjige:" GridPane.columnSpan="2" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets left="10.0" />
          </GridPane.margin>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
       </Label>
       <TextArea fx:id="lokacijaKnjigeTxtArea" prefHeight="137.0" prefWidth="194.0" GridPane.rowIndex="2">
          <GridPane.margin>

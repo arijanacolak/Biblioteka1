@@ -42,7 +42,7 @@
    </rowConstraints>
    <children>
       <Button fx:id="registracijaKorisnikabtn" mnemonicParsing="false" onAction="#registracijaKorisnika" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Registracija korisnika" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-      <Label id="labela" prefHeight="40.0" prefWidth="580.0" styleClass="labela" text="Odaberite željenu opciju:" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2">
+      <Label id="labela" prefHeight="57.0" prefWidth="580.0" styleClass="labela" text="Odaberite željenu opciju:" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2">
          <padding>
             <Insets left="15.0" top="10.0" />
          </padding>

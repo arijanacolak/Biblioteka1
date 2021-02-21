@@ -7,12 +7,14 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.recenzijeController">
@@ -47,13 +49,20 @@
             <Insets />
          </GridPane.margin>
       </ListView>
-      <Label prefHeight="14.0" prefWidth="118.0" text="Recenzije:" GridPane.columnIndex="2">
+      <Label id="labela" prefHeight="52.0" prefWidth="366.0" styleClass="labela" text="   Recenzije:" GridPane.columnIndex="2" GridPane.columnSpan="3">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font size="14.0" />
          </font>
          <padding>
-            <Insets left="10.0" top="35.0" />
+            <Insets left="10.0" />
          </padding>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
       </Label>
       <Label fx:id="nazivLabela" prefHeight="34.0" prefWidth="254.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
       <Label fx:id="autorLabela" prefHeight="30.0" prefWidth="278.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />

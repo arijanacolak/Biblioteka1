@@ -7,10 +7,12 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.detaljiOKnjiziController">
@@ -25,8 +27,8 @@
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.59997558593744" minWidth="10.0" prefWidth="36.199963378906205" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="84.79999618530273" minHeight="10.0" prefHeight="67.00001220703125" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="89.19998779296876" minHeight="0.0" prefHeight="31.79998779296875" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="84.79999618530273" minHeight="10.0" prefHeight="63.000018310546885" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="89.19998779296876" minHeight="0.0" prefHeight="34.199981689453125" vgrow="SOMETIMES" />
     <RowConstraints maxHeight="89.19998779296876" minHeight="0.0" prefHeight="30.200000000000003" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="103.19999999999999" minHeight="0.0" prefHeight="32.599999999999994" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="222.40000000000003" minHeight="0.0" prefHeight="32.600006103515625" vgrow="SOMETIMES" />
@@ -38,13 +40,20 @@
       <RowConstraints maxHeight="21.399999999999977" minHeight="10.0" prefHeight="14.199987792968727" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label prefHeight="55.0" prefWidth="178.0" text="Detalji o knjizi:" GridPane.columnIndex="1">
+      <Label id="labela" prefHeight="51.0" prefWidth="390.0" styleClass="labela" text="  Detalji o knjizi:" GridPane.columnIndex="1" GridPane.columnSpan="2">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font size="14.0" />
          </font>
-         <padding>
-            <Insets top="35.0" />
-         </padding>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
       </Label>
       <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="8" />
       <Label fx:id="nazivKnjigeLabela" prefHeight="18.0" prefWidth="274.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
