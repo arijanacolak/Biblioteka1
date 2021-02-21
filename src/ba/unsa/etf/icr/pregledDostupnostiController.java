@@ -20,6 +20,8 @@ public class pregledDostupnostiController {
     public ImageView slikaView;
     public Button nazad1Btn;
     public TextArea lokacijaKnjigeTxtArea;
+    public Button btnZatvoriPrviSprat;
+    public Button btnZatvoriDrugiSprat;
 
     public void actionCacelButton(ActionEvent actionEvent) {
         ((Stage) nazadBtn.getScene().getWindow()).close();
@@ -43,6 +45,14 @@ public class pregledDostupnostiController {
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
+    }
+
+    public void zatvoriPrviSpratAction(ActionEvent actionEvent) {
+        ((Stage) btnZatvoriPrviSprat.getScene().getWindow()).close();
+    }
+
+    public void zatvoriDrugiSpratAction(ActionEvent actionEvent) {
+        ((Stage) btnZatvoriDrugiSprat.getScene().getWindow()).close();
     }
 
   /* public void nazadAction(ActionEvent actionEvent) {
