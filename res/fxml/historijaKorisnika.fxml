@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollBar?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
-  <columnConstraints>
+<?import java.net.URL?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.historijaKorisnika">
+   <stylesheets>
+      <URL value="@/biblioteka.css" />
+   </stylesheets>
+   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.39996337890625" minWidth="8.799969482421886" prefWidth="39.60001831054687" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0000305175781" minWidth="10.0" prefWidth="246.2000244140625" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.5999755859375" minWidth="10.0" prefWidth="155.7999755859375" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.39996337890625" minWidth="10.0" prefWidth="95.5999755859375" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.39996337890625" minWidth="10.0" prefWidth="202.80002441406248" />
+      <ColumnConstraints />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints maxHeight="45.599981689453124" minHeight="10.0" prefHeight="30.199990844726564" vgrow="SOMETIMES" />
@@ -55,18 +51,24 @@
             <Insets top="20.0" />
          </GridPane.margin>
       </ListView>
-      <Label prefHeight="18.0" prefWidth="210.0" text="   Ime:  Niko" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Label layoutX="37.0" layoutY="112.0" prefHeight="18.0" prefWidth="210.0" text="   Prezime : Nikić" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <Label prefHeight="18.0" prefWidth="221.0" text="   Email: niko.nikic@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <Label prefHeight="18.0" prefWidth="257.0" text="   Adresa: Nepoznata bb" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Label prefHeight="18.0" prefWidth="84.0" text="   Ime: " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label layoutX="37.0" layoutY="112.0" prefHeight="18.0" prefWidth="84.0" text="   Prezime :" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Label prefHeight="18.0" prefWidth="84.0" text="   Email: " GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label prefHeight="18.0" prefWidth="84.0" text="   Adresa:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
       <Label prefHeight="18.0" prefWidth="209.0" text="   Prethodno zadužene knjige:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-      <Label prefHeight="18.0" prefWidth="119.0" text="   Stepski vuk" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-      <Label prefHeight="18.0" prefWidth="174.0" text="   Derviš i smrt" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-      <Label prefHeight="18.0" prefWidth="241.0" text="   Trenutno zadužena knjiga: Tvrđava" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-      <Label prefHeight="18.0" prefWidth="210.0" text="   Datum zaduženja: 20/02/2021" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-      <Label prefHeight="18.0" prefWidth="210.0" text="   Datum vraćanja: 06/03/2021" GridPane.columnIndex="1" GridPane.rowIndex="12" />
-      <Button id="d1" fx:id="btnNazad" mnemonicParsing="false" onAction="#openPrevious" prefHeight="34.0" prefWidth="86.0" text="Nazad" GridPane.columnIndex="1" GridPane.rowIndex="15" />
-      <Button id="d1" fx:id="btnNazad1" mnemonicParsing="false" onAction="#openPrevious" prefHeight="30.0" prefWidth="110.0" text="Završi pregled" GridPane.columnIndex="4" GridPane.rowIndex="15">
+      <Label fx:id="lblPrethodnoZaduzena1" prefHeight="18.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets left="12.0" />
+         </GridPane.margin></Label>
+      <Label fx:id="lblPrethodnoZaduzena2" prefHeight="18.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <GridPane.margin>
+            <Insets left="12.0" />
+         </GridPane.margin></Label>
+      <Label prefHeight="18.0" prefWidth="190.0" text="   Trenutno zadužena knjiga: " GridPane.columnIndex="1" GridPane.rowIndex="10" />
+      <Label prefHeight="18.0" prefWidth="150.0" text="   Datum zaduženja: " GridPane.columnIndex="1" GridPane.rowIndex="11" />
+      <Label prefHeight="18.0" prefWidth="150.0" text="   Datum vraćanja: " GridPane.columnIndex="1" GridPane.rowIndex="12" />
+      <Button id="d1" fx:id="btnNazad" mnemonicParsing="false" onAction="#nazadAction" prefHeight="34.0" prefWidth="86.0" text="Nazad" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+      <Button id="d1" fx:id="btnNazad1" mnemonicParsing="false" onAction="#nazadAction" prefHeight="30.0" prefWidth="110.0" text="Završi pregled" GridPane.columnIndex="4" GridPane.rowIndex="15">
          <GridPane.margin>
             <Insets left="45.0" />
          </GridPane.margin>
@@ -163,5 +165,45 @@
             <Insets left="100.0" />
          </GridPane.margin>
       </Button>
+      <Label GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="lblIme" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="lblPrezime" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="lblEmail" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="lblAdresa" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="lblTrenutnoZaduzenaKnjiga" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets left="190.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="lblDatumZaduzenja" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+         <GridPane.margin>
+            <Insets left="140.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="lblDatumVracanja" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+         <GridPane.margin>
+            <Insets left="125.0" />
+         </GridPane.margin>
+      </Label>
    </children>
 </GridPane>
