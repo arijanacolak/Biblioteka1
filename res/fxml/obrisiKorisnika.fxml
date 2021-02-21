@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@/biblioteka.css" />
     </stylesheets>
@@ -77,17 +86,17 @@
       </Button>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="2147483647">
          <children>
-            <Button fx:id="btnDetaljniPrikazPodatakaOKorisniku" mnemonicParsing="false" onAction="#detaljniPrikazPodatakaAction" prefHeight="32.0" prefWidth="180.0" text="Detaljni prikaz podataka">
+            <Button fx:id="btnDetaljniPrikazPodatakaOKorisniku" mnemonicParsing="false" onAction="#detaljniPrikazPodatakaAction" prefHeight="32.0" prefWidth="180.0" styleClass="dugmici" text="Detaljni prikaz podataka">
                <VBox.margin>
                   <Insets left="40.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnUrediPodatke" mnemonicParsing="false" onAction="#urediPodatkeAction" prefHeight="32.0" prefWidth="180.0" text="Uredite podatke">
+            <Button fx:id="btnUrediPodatke" mnemonicParsing="false" onAction="#urediPodatkeAction" prefHeight="32.0" prefWidth="180.0" styleClass="dugmici" text="Uredi podatke">
                <VBox.margin>
                   <Insets left="40.0" top="20.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#obrisiKorisnikaAction" prefHeight="32.0" prefWidth="180.0" text="Obriši korisnika">
+            <Button mnemonicParsing="false" onAction="#obrisiKorisnikaAction" prefHeight="32.0" prefWidth="180.0" styleClass="dugmici" text="Obriši korisnika">
                <VBox.margin>
                   <Insets left="40.0" top="20.0" />
                </VBox.margin>

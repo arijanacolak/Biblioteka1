@@ -129,8 +129,8 @@
                   </ComboBox>
                   <ButtonBar prefHeight="40.0" prefWidth="200.0">
                      <buttons>
-                        <Button id="d4" fx:id="okButton" mnemonicParsing="false" onAction="#actionOkButton" text="Potvrdi" />
                         <Button id="d5" fx:id="cancelButton" mnemonicParsing="false" onAction="#actionCacelButton" styleClass="dugmici" text="Nazad" />
+                        <Button id="d4" fx:id="okButton" mnemonicParsing="false" onAction="#actionOkButton" text="Potvrdi" />
                      </buttons>
                      <VBox.margin>
                         <Insets />
