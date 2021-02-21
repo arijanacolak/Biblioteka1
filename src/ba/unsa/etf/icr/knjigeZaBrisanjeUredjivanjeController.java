@@ -2,6 +2,8 @@ package ba.unsa.etf.icr;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -41,6 +43,72 @@ public class knjigeZaBrisanjeUredjivanjeController {
         ObservableList<Knjiga> listaKnjiga = FXCollections.observableArrayList();
 
         listaKnjiga.addAll(tblKnjige.getItems());
+
+       // ObservableList<Knjiga> listaKnjiga = FXCollections.observableArrayList();
+
+       // listaKnjiga.addAll(tblKnjige.getItems());
+        FilteredList<Knjiga> filteredData = new FilteredList<>(listaKnjiga, p -> true);
+
+        // 2. Set the filter Predicate whenever the filter changes.
+        fldPretragaPoNazivu.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(myObject -> {
+                // If filter text is empty, display all persons.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+                // Compare first name and last name field in your object with filter.
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (String.valueOf(myObject.getNazivKnjige()).toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                    // Filter matches first name.
+                }
+                return false; // Does not match.
+            });
+        });
+
+        fldPretragaPoAutoru.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(myObject -> {
+                // If filter text is empty, display all persons.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+                // Compare first name and last name field in your object with filter.
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (String.valueOf(myObject.getAutor()).toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                    // Filter matches first name.
+                }
+                return false; // Does not match.
+            });
+        });
+
+        fldPretragaPoJeziku.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(myObject -> {
+                // If filter text is empty, display all persons.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+                // Compare first name and last name field in your object with filter.
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (String.valueOf(myObject.getJezik()).toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                    // Filter matches first name.
+                }
+
+                return false; // Does not match.
+            });
+        });
+
+        // 3. Wrap the FilteredList in a SortedList.
+        SortedList<Knjiga> sortedData = new SortedList<>(filteredData);
+
+        // 4. Bind the SortedList comparator to the TableView comparator.
+        sortedData.comparatorProperty().bind(tblKnjige.comparatorProperty());
+        // 5. Add sorted (and filtered) data to the table.
+        tblKnjige.setItems(sortedData);
     }
 
     public void urediKnjiguAction(ActionEvent actionEvent) throws IOException {

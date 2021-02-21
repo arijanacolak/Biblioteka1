@@ -68,12 +68,12 @@
        </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="1">
          <children>
-            <TextField promptText="Pretraga po id">
+            <TextField fx:id="fldPretragaPoID" promptText="Pretraga po id">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
             </TextField>
-            <TextField promptText="Pretraga po imenu">
+            <TextField fx:id="fldPretragaPoImenu" promptText="Pretraga po imenu">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
