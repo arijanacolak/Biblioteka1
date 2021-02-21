@@ -21,6 +21,7 @@ public class registracijaKnjigeController {
     public ComboBox fontComboBox;
     public Button okButton;
     public Button cancelButton;
+    public Label lblPoruka;
 
     public void initialize(){
 
@@ -97,6 +98,8 @@ public class registracijaKnjigeController {
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK) {
+                lblPoruka.setText("Uspješno popunjeni podaci");
+                lblPoruka.setStyle("-fx-text-fill: darkgreen");
                 knjigaField.setStyle("-fx-background-color: lightgreen");
                 autorField.setStyle("-fx-background-color: lightgreen");
                 ISBNField.setStyle("-fx-background-color: lightgreen");
@@ -119,29 +122,77 @@ public class registracijaKnjigeController {
             }
             //((Stage) OkButton.getScene().getWindow()).close();
         } else{
-            if(knjigaField.getText().equals("") || knjigaField.getText() == null) knjigaField.setStyle("-fx-background-color: lightpink");
-            else knjigaField.setStyle("-fx-background-color: lightgreen");
+            if(knjigaField.getText().equals("") || knjigaField.getText() == null){
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                knjigaField.setStyle("-fx-background-color: lightpink");
+            }
+            else {
+                lblPoruka.setText("");
+                knjigaField.setStyle("-fx-background-color: lightgreen");
+            }
 
-            if(autorField.getText().equals("") || autorField.getText() == null) autorField.setStyle("-fx-background-color: lightpink");
-            else autorField.setStyle("-fx-background-color: lightgreen");
+            if(autorField.getText().equals("") || autorField.getText() == null) {
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                autorField.setStyle("-fx-background-color: lightpink");
+            }
+            else {
+                lblPoruka.setText("");
+                autorField.setStyle("-fx-background-color: lightgreen");
+            }
 
-            if(ISBNField.getText().equals("") || ISBNField.getText() == null) ISBNField.setStyle("-fx-background-color: lightpink");
-            else ISBNField.setStyle("-fx-background-color: lightgreen");
+            if(ISBNField.getText().equals("") || ISBNField.getText() == null) {
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                ISBNField.setStyle("-fx-background-color: lightpink");
+            }
+            else{
+                lblPoruka.setText("");
+                ISBNField.setStyle("-fx-background-color: lightgreen");
+            }
 
-            if(izdavacField.getText().equals("") || izdavacField.getText() == null) izdavacField.setStyle("-fx-background-color: lightpink");
-            else izdavacField.setStyle("-fx-background-color: lightgreen");
+            if(izdavacField.getText().equals("") || izdavacField.getText() == null) {
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                izdavacField.setStyle("-fx-background-color: lightpink");
+            }
+            else{
+                lblPoruka.setText("");
+                izdavacField.setStyle("-fx-background-color: lightgreen");
+            }
 
-            if(izdanjeField.getText().equals("") || izdanjeField.getText() == null) izdanjeField.setStyle("-fx-background-color: lightpink");
-            else izdanjeField.setStyle("-fx-background-color: lightgreen");
+            if(izdanjeField.getText().equals("") || izdanjeField.getText() == null){
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                izdanjeField.setStyle("-fx-background-color: lightpink");
+            }
+            else {
+                lblPoruka.setText("");
+                izdanjeField.setStyle("-fx-background-color: lightgreen");
+            }
 
-            if(!kategorijaComboBox.isPressed() || kategorijaComboBox.getValue() == null) kategorijaComboBox.setStyle("-fx-background-color: lightpink");
-            else kategorijaComboBox.setStyle("-fx-background-color: lightgreen");
+            if(!kategorijaComboBox.isPressed() || kategorijaComboBox.getValue() == null) {
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                kategorijaComboBox.setStyle("-fx-background-color: lightpink");
+            }
+            else{
+                lblPoruka.setText("");
+                kategorijaComboBox.setStyle("-fx-background-color: lightgreen");
+            }
 
-            if(!jezikComboBox.isPressed() || jezikComboBox.getValue() == null) jezikComboBox.setStyle("-fx-background-color: lightpink");
-            else jezikComboBox.setStyle("-fx-background-color: lightgreen");
+            if(!jezikComboBox.isPressed() || jezikComboBox.getValue() == null){
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                jezikComboBox.setStyle("-fx-background-color: lightpink");
+            }
+            else {
+                lblPoruka.setText("");
+                jezikComboBox.setStyle("-fx-background-color: lightgreen");
+            }
 
-            if(!fontComboBox.isPressed() || fontComboBox.getValue() == null) fontComboBox.setStyle("-fx-background-color: lightpink");
-            else fontComboBox.setStyle("-fx-background-color: lightgreen");
+            if(!fontComboBox.isPressed() || fontComboBox.getValue() == null){
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                fontComboBox.setStyle("-fx-background-color: lightpink");
+            }
+            else {
+                lblPoruka.setText("");
+                fontComboBox.setStyle("-fx-background-color: lightgreen");
+            }
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText("Nije moguće dodati knjigu!");

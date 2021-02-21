@@ -55,6 +55,10 @@
     -fx-background-color:#a9a9a9;
 }
 
+#labelaPoruka{
+    -fx-text-fill: darkred;
+}
+
 .boja{
     -fx-background-color:#a9a9a9;
 }

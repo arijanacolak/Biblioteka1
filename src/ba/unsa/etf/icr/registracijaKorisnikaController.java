@@ -23,6 +23,7 @@ public class registracijaKorisnikaController {
     public TextField parentNameField;
     public TextField surnameField;
     public TextField nameField;
+    public Label lblPoruka;
 
     public void initialize(){
         ObservableList<String> gradovi = FXCollections.observableArrayList();
@@ -42,6 +43,8 @@ public class registracijaKorisnikaController {
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK) {
+                lblPoruka.setText("Uspješno popunjeni podaci");
+                lblPoruka.setStyle("-fx-text-fill: darkgreen");
                 nameField.setStyle("-fx-background-color: lightgreen");
                 surnameField.setStyle("-fx-background-color: lightgreen");
                 parentNameField.setStyle("-fx-background-color: lightgreen");
@@ -65,36 +68,88 @@ public class registracijaKorisnikaController {
             }
         }
         else{
-            if(nameField.getText().equals("") || nameField.getText() == null) nameField.setStyle("-fx-background-color: lightpink");
-            else nameField.setStyle("-fx-background-color: lightgreen");
+            if(nameField.getText().equals("") || nameField.getText() == null) {
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                nameField.setStyle("-fx-background-color: lightpink");
+            }
+            else{
+                lblPoruka.setText("");
+                nameField.setStyle("-fx-background-color: lightgreen");
+            }
 
-            if(surnameField.getText().equals("") || surnameField.getText() == null) surnameField.setStyle("-fx-background-color: lightpink");
-            else surnameField.setStyle("-fx-background-color: lightgreen");
-
-            if(parentNameField.getText().equals("") || parentNameField.getText() == null) parentNameField.setStyle("-fx-background-color: lightpink");
-            else parentNameField.setStyle("-fx-background-color: lightgreen");
-
-            if(jmbgField.getText().equals("") || jmbgField.getText() == null) jmbgField.setStyle("-fx-background-color: lightpink");
-            else jmbgField.setStyle("-fx-background-color: lightgreen");
-
-            if(addressField.getText().equals("") || addressField.getText() == null) addressField.setStyle("-fx-background-color: lightpink");
-            else addressField.setStyle("-fx-background-color: lightgreen");
-
-            if(addressPlace.getValue() == null) addressPlace.setStyle("-fx-background-color: lightpink");
-            else addressPlace.setStyle("-fx-background-color: lightgreen");
-
-            if(!dateField.isPressed() || dateField.getValue().isAfter(ChronoLocalDate.from(LocalDateTime.now()))) dateField.setStyle("-fx-background-color: lightpink");
+            if(surnameField.getText().equals("") || surnameField.getText() == null) {
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                surnameField.setStyle("-fx-background-color: lightpink");
+            }
             else {
+                lblPoruka.setText("");
+                surnameField.setStyle("-fx-background-color: lightgreen");
+            }
+
+            if(parentNameField.getText().equals("") || parentNameField.getText() == null) {
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                parentNameField.setStyle("-fx-background-color: lightpink");
+            }
+            else{
+                lblPoruka.setText("");
+                parentNameField.setStyle("-fx-background-color: lightgreen");
+            }
+
+            if(jmbgField.getText().equals("") || jmbgField.getText() == null) {
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                jmbgField.setStyle("-fx-background-color: lightpink");
+            }
+            else {
+                lblPoruka.setText("");
+                jmbgField.setStyle("-fx-background-color: lightgreen");
+            }
+
+            if(addressField.getText().equals("") || addressField.getText() == null) {
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                addressField.setStyle("-fx-background-color: lightpink");
+            }
+            else {
+                lblPoruka.setText("");
+                addressField.setStyle("-fx-background-color: lightgreen");
+            }
+
+            if(addressPlace.getValue() == null) {
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                addressPlace.setStyle("-fx-background-color: lightpink");
+            }
+            else {
+                lblPoruka.setText("");
+                addressPlace.setStyle("-fx-background-color: lightgreen");
+            }
+
+            if(!dateField.isPressed() || dateField.getValue().isAfter(ChronoLocalDate.from(LocalDateTime.now()))){
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                dateField.setStyle("-fx-background-color: lightpink");
+            }
+            else {
+                lblPoruka.setText("");
                 dateField.getStyleClass().removeAll();
                 dateField.setStyle("-fx-background-color: lightgreen");
             }
 
-            if(placeOfBirth.getValue() == null) placeOfBirth.setStyle("-fx-background-color: lightpink");
-            else placeOfBirth.setStyle("-fx-background-color: lightgreen");
+            if(placeOfBirth.getValue() == null){
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                placeOfBirth.setStyle("-fx-background-color: lightpink");
+            }
+            else {
+                lblPoruka.setText("");
+                placeOfBirth.setStyle("-fx-background-color: lightgreen");
+            }
 
 
-            if(postalNumberField.getText().equals("") || postalNumberField.getText() == null) postalNumberField.setStyle("-fx-background-color: lightpink");
-            else postalNumberField.setStyle("-fx-background-color: lightgreen");
+            if(postalNumberField.getText().equals("") || postalNumberField.getText() == null) {
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                postalNumberField.setStyle("-fx-background-color: lightpink");
+            }
+            else {
+                lblPoruka.setText("");
+                postalNumberField.setStyle("-fx-background-color: lightgreen");
+            }
 
 
             Alert alert = new Alert(Alert.AlertType.ERROR);
