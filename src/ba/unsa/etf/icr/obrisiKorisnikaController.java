@@ -117,11 +117,24 @@ public class obrisiKorisnikaController {
     }
 
     public void urediPodatkeAction(ActionEvent event) throws IOException {
-        if (tableKorisnici.getSelectionModel().getSelectedItem() != null) {
+        if(tableKorisnici.getSelectionModel().getSelectedItem() != null) {
             Stage myStage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/urediKorisnika.fxml"));
             Parent root = loader.load();
-            myStage.setTitle("Uredite podatke o korisniku");
+            urediKorisnikaController podaci = loader.getController();
+
+            podaci.fldIme.setText(tableKorisnici.getSelectionModel().getSelectedItem().getIme());
+            podaci.fldPrezime.setText(tableKorisnici.getSelectionModel().getSelectedItem().getPrezime());
+            podaci.fldImeRoditelja.setText(tableKorisnici.getSelectionModel().getSelectedItem().getImeRoditelja());
+            podaci.fldEmail.setText(tableKorisnici.getSelectionModel().getSelectedItem().getEmail());
+            podaci.fldAdresaPrebivalista.setText(tableKorisnici.getSelectionModel().getSelectedItem().getAdresaPrebivalista());
+            podaci.fldJMBG.setText(tableKorisnici.getSelectionModel().getSelectedItem().getJmbg().toString());
+            podaci.fldPostanskiBroj.setText(tableKorisnici.getSelectionModel().getSelectedItem().getPostanskiBroj().toString());
+            podaci.dateDatumRodjenja.setValue(tableKorisnici.getSelectionModel().getSelectedItem().getDatumRodjenja());
+            podaci.comboMjestoRodjenja.setValue(tableKorisnici.getSelectionModel().getSelectedItem().getMjestoRodjenja());
+            podaci.comboMjestoPrebivalista.setValue(tableKorisnici.getSelectionModel().getSelectedItem().getMjestoPrebivalista());
+
+            myStage.setTitle("Uredi podatke o korisniku");
             myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
             myStage.setResizable(false);
             myStage.showAndWait();
@@ -129,8 +142,8 @@ public class obrisiKorisnikaController {
         else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setHeaderText("Niste selektovali korisnika!");
-            alert.setContentText("Potrebno je da selektujete željenog korisnika za ovu vrstu akcije!");
+            alert.setHeaderText("Niste selektovali knjigu.");
+            alert.setContentText("Da biste otvorili ovaj prozor, potrebno je da selektujete željenu knjigu!");
             alert.showAndWait();
         }
     }

@@ -1,9 +1,9 @@
 package ba.unsa.etf.icr;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.util.Optional;
@@ -13,6 +13,24 @@ public class urediKorisnikaController {
     public Button btnNazad;
     public Button btnObrisiKorisnika;
     public Button btnSpasiPromjene;
+    public TextField fldIme;
+    public TextField fldPrezime;
+    public TextField fldImeRoditelja;
+    public TextField fldAdresaPrebivalista;
+    public TextField fldEmail;
+    public TextField fldJMBG;
+    public DatePicker dateDatumRodjenja;
+    public ComboBox comboMjestoRodjenja;
+    public ComboBox comboMjestoPrebivalista;
+    public TextField fldPostanskiBroj;
+
+    public void initialize(){
+        ObservableList<String> listaGradova = FXCollections.observableArrayList();
+        listaGradova.addAll("Sarajevo", "Mostar", "Bihać", "Banja Luka");
+
+        comboMjestoPrebivalista.setItems(listaGradova);
+        comboMjestoRodjenja.setItems(listaGradova);
+    }
 
     public void nazad(ActionEvent actionEvent) {
         ((Stage) btnNazad.getScene().getWindow()).close();
