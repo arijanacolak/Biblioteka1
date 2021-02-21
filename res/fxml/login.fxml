@@ -44,7 +44,7 @@
       <RowConstraints maxHeight="44.79998779296875" minHeight="40.79998779296875" prefHeight="41.5999755859375" />
    </rowConstraints>
    <children>
-      <Label id="labela" prefHeight="58.0" prefWidth="581.0" styleClass="labela" text="Unesite pristupne podatke ili skenirajte člansku karticu" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2">
+      <Label id="labela" prefHeight="58.0" prefWidth="526.0" styleClass="labela" text="Unesite pristupne podatke ili skenirajte člansku karticu" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="2">
          <padding>
             <Insets left="15.0" top="10.0" />
          </padding>
