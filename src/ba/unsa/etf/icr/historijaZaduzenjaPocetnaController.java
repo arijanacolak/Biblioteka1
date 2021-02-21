@@ -10,33 +10,36 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class historijaZaduzenjaPocetnaController {
-    public TableView tblKnjige;
-    public TableColumn columnNaziv;
-    public TableColumn columnJezik;
-    public TableColumn columnAutor;
+
+    public TableView<Korisnik> tblKorisnici;
+    public TableColumn columnIme;
+    public TableColumn columnPrezime;
+    public TableColumn columEmail;
     public Button btnNazad;
-    public Button btnNazad1;
-    private KorisnikModel model;
-    public historijaZaduzenjaPocetnaController(KorisnikModel model) {
+    public Button btnProvjeri;
+
+    KorisnikModel model;
+    public historijaZaduzenjaPocetnaController(){}
+    public historijaZaduzenjaPocetnaController(KorisnikModel model){
         this.model = model;
     }
-    public historijaZaduzenjaPocetnaController(){}
 
     public void initialize() {
-        tblKnjige.setItems(model.getKorisnici());
-        columnNaziv.setCellValueFactory(new PropertyValueFactory<>("ime"));
-        columnAutor.setCellValueFactory(new PropertyValueFactory<>("prezime"));
-        columnJezik.setCellValueFactory(new PropertyValueFactory<>("email"));
+        tblKorisnici.setItems(model.getKorisniciHistorija());
+        columnIme.setCellValueFactory(new PropertyValueFactory<>("ime"));
+        columnPrezime.setCellValueFactory(new PropertyValueFactory<>("prezime"));
+        columEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
 
-        ObservableList<Korisnik> listaKnjiga = FXCollections.observableArrayList();
+        ObservableList<Korisnik> listaKorisnika = FXCollections.observableArrayList();
 
-        listaKnjiga.addAll(tblKnjige.getItems());
+        listaKorisnika.addAll(tblKorisnici.getItems());
     }
-    public void openPrevious(ActionEvent actionEvent) {
+
+    public void nazadAction(ActionEvent actionEvent) {
         ((Stage) btnNazad.getScene().getWindow()).close();
     }
 
-    /*public void zatvori(ActionEvent actionEvent) {
-        ((Stage) btnNazad1.getScene().getWindow()).close();
-    }*/
+    public void provjeriAction(ActionEvent actionEvent) {
+    }
+
 }

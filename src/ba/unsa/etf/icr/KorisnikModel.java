@@ -31,7 +31,15 @@ public class KorisnikModel {
         korisniciHistorija.add(new Korisnik("Ime1", "Prezime1", "ime1@etf.unsa.ba", "Adresa1 bb", "Stepski Vuk", "Tvrđava", "Derviš i smrt", "19/02/2021", "05/03/2021"));
         korisniciHistorija.add(new Korisnik("Ime2", "Prezime2", "ime2@etf.unsa.ba", "Adresa2 bb", "Stepski Vuk", "Legenda o Ali-paši", "Hamlet", "16/02/2021", "02/03/2021"));
         korisniciHistorija.add(new Korisnik("Ime3", "Prezime3", "ime3@etf.unsa.ba", "Adresa3 bb", "Roman o Ajvazu", "", "Madame Bovary", "10/02/2021", "25/02/2021"));
+        trenutniKorisnik.set(null);
+    }
 
+    public ObservableList<Korisnik> getKorisniciHistorija() {
+        return korisniciHistorija;
+    }
+
+    public void setKorisniciHistorija(ObservableList<Korisnik> korisniciHistorija) {
+        this.korisniciHistorija = korisniciHistorija;
     }
 
     public ObservableList<Korisnik> getKorisnici() {

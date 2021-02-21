@@ -90,25 +90,26 @@ public class pocetnaController {
     }
 
     public void historijaZaduzenjaAction(ActionEvent actionEvent) throws IOException {
-        /*KorisnikModel model = new KorisnikModel();
-        model.napuni();
-        obrisiKorisnikaController ctrl = new obrisiKorisnikaController(model);
+        KorisnikModel model = new KorisnikModel();
+        model.napuniZaHistoriju();
+        historijaZaduzenjaPocetnaController historija = new historijaZaduzenjaPocetnaController(model);
         Stage myStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/provjeraHistorijeZaduzenja.fxml"));
-        loader.setController(ctrl);
+        loader.setController(historija);
         Parent root = loader.load();
         myStage.setTitle("Historija zaduženja");
         //myStage.initOwner(tbAddOwner.getScene().getWindow());
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
-*/
+
+        /*
         Stage myStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/provjeraHistorijeZaduzenja.fxml"));
         Parent root = loader.load();
         myStage.setTitle("Historija");
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
-        myStage.showAndWait();
+        myStage.showAndWait();*/
     }
 }

@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@/biblioteka.css" />
     </stylesheets>
@@ -41,9 +32,9 @@
    <children>
       <TableView fx:id="tblKorisnici" prefHeight="269.0" prefWidth="458.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="4">
          <columns>
-            <TableColumn fx:id="columnNaziv" prefWidth="156.00000762939453" text="Ime" />
-            <TableColumn fx:id="columnJezik" minWidth="0.0" prefWidth="133.5999755859375" text="Prezime" />
-            <TableColumn fx:id="columnAutor" prefWidth="149.5999755859375" text="Email" />
+            <TableColumn fx:id="columnIme" prefWidth="156.00000762939453" text="Ime" />
+            <TableColumn fx:id="columnPrezime" minWidth="0.0" prefWidth="133.5999755859375" text="Prezime" />
+            <TableColumn fx:id="columEmail" prefWidth="149.5999755859375" text="Email" />
          </columns>
       </TableView>
       <Label prefHeight="11.0" prefWidth="210.0" text="Provjera historije zaduženja:" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -54,7 +45,7 @@
             <Insets left="10.0" />
          </padding>
       </Label>
-      <Button id="d1" fx:id="btnNazad" mnemonicParsing="false" prefHeight="34.0" prefWidth="86.0" text="Nazad" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Button id="d1" fx:id="btnNazad" mnemonicParsing="false" onAction="#nazadAction" prefHeight="34.0" prefWidth="86.0" text="Nazad" GridPane.columnIndex="1" GridPane.rowIndex="7" />
       <VBox GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.rowSpan="3">
          <GridPane.margin>
             <Insets left="30.0" top="15.0" />
@@ -66,7 +57,7 @@
                </VBox.margin></Button>
          </children>
       </VBox>
-      <Button id="d1" fx:id="btnNazad1" prefHeight="34.0" prefWidth="86.0" text="Provjeri" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+      <Button id="d1" fx:id="btnProvjeri" onAction="#provjeriAction" prefHeight="34.0" prefWidth="86.0" text="Provjeri" GridPane.columnIndex="5" GridPane.rowIndex="7" />
       <MenuBar prefHeight="36.0" prefWidth="738.0" GridPane.columnSpan="6">
          <menus>
             <Menu mnemonicParsing="false" text="Registracija korisnika">
