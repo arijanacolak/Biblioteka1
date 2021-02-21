@@ -75,4 +75,20 @@ public class loginController {
             labelaPoruka.setText("Neispravni korisnički podaci.");
         }
     }
+
+    public void otvoriAction(ActionEvent actionEvent) throws IOException {
+        if(validacija() == true) {
+            labelaPoruka.setText("");
+            Stage myStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/odabirPocetna.fxml"));
+            Parent root = loader.load();
+            myStage.setTitle("Početna");
+            myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            myStage.setResizable(false);
+            myStage.showAndWait();
+        }
+        else {
+            labelaPoruka.setText("Neispravni korisnički podaci.");
+        }
+    }
 }
