@@ -148,7 +148,7 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </VBox>
-            <Label id="labelaPoruka" fx:id="lblPoruka" prefWidth="400.0" GridPane.columnSpan="2" GridPane.rowIndex="10">
+            <Label id="labelaPoruka" fx:id="lblPoruka" prefWidth="400.0" GridPane.columnSpan="4" GridPane.rowIndex="10">
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" />
                </GridPane.margin>

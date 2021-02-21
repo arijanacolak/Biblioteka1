@@ -43,7 +43,7 @@ public class registracijaKorisnikaController {
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK) {
-                lblPoruka.setText("Uspješno popunjeni podaci");
+                lblPoruka.setText("Uspješno popunjeni podaci!");
                 lblPoruka.setStyle("-fx-text-fill: darkgreen");
                 nameField.setStyle("-fx-background-color: lightgreen");
                 surnameField.setStyle("-fx-background-color: lightgreen");
@@ -69,7 +69,7 @@ public class registracijaKorisnikaController {
         }
         else{
             if(nameField.getText().equals("") || nameField.getText() == null) {
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 nameField.setStyle("-fx-background-color: lightpink");
             }
             else{
@@ -78,7 +78,7 @@ public class registracijaKorisnikaController {
             }
 
             if(surnameField.getText().equals("") || surnameField.getText() == null) {
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 surnameField.setStyle("-fx-background-color: lightpink");
             }
             else {
@@ -87,7 +87,7 @@ public class registracijaKorisnikaController {
             }
 
             if(parentNameField.getText().equals("") || parentNameField.getText() == null) {
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 parentNameField.setStyle("-fx-background-color: lightpink");
             }
             else{
@@ -96,7 +96,7 @@ public class registracijaKorisnikaController {
             }
 
             if(jmbgField.getText().equals("") || jmbgField.getText() == null) {
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 jmbgField.setStyle("-fx-background-color: lightpink");
             }
             else {
@@ -105,7 +105,7 @@ public class registracijaKorisnikaController {
             }
 
             if(addressField.getText().equals("") || addressField.getText() == null) {
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 addressField.setStyle("-fx-background-color: lightpink");
             }
             else {
@@ -114,7 +114,7 @@ public class registracijaKorisnikaController {
             }
 
             if(addressPlace.getValue() == null) {
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 addressPlace.setStyle("-fx-background-color: lightpink");
             }
             else {
@@ -123,7 +123,7 @@ public class registracijaKorisnikaController {
             }
 
             if(!dateField.isPressed() || dateField.getValue().isAfter(ChronoLocalDate.from(LocalDateTime.now()))){
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 dateField.setStyle("-fx-background-color: lightpink");
             }
             else {

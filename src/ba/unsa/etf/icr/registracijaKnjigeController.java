@@ -98,7 +98,7 @@ public class registracijaKnjigeController {
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK) {
-                lblPoruka.setText("Uspješno popunjeni podaci");
+                lblPoruka.setText("Uspješno popunjeni podaci!");
                 lblPoruka.setStyle("-fx-text-fill: darkgreen");
                 knjigaField.setStyle("-fx-background-color: lightgreen");
                 autorField.setStyle("-fx-background-color: lightgreen");
@@ -123,7 +123,7 @@ public class registracijaKnjigeController {
             //((Stage) OkButton.getScene().getWindow()).close();
         } else{
             if(knjigaField.getText().equals("") || knjigaField.getText() == null){
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 knjigaField.setStyle("-fx-background-color: lightpink");
             }
             else {
@@ -132,7 +132,7 @@ public class registracijaKnjigeController {
             }
 
             if(autorField.getText().equals("") || autorField.getText() == null) {
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 autorField.setStyle("-fx-background-color: lightpink");
             }
             else {
@@ -141,7 +141,7 @@ public class registracijaKnjigeController {
             }
 
             if(ISBNField.getText().equals("") || ISBNField.getText() == null) {
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 ISBNField.setStyle("-fx-background-color: lightpink");
             }
             else{
@@ -150,7 +150,7 @@ public class registracijaKnjigeController {
             }
 
             if(izdavacField.getText().equals("") || izdavacField.getText() == null) {
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 izdavacField.setStyle("-fx-background-color: lightpink");
             }
             else{
@@ -159,7 +159,7 @@ public class registracijaKnjigeController {
             }
 
             if(izdanjeField.getText().equals("") || izdanjeField.getText() == null){
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 izdanjeField.setStyle("-fx-background-color: lightpink");
             }
             else {
@@ -168,7 +168,7 @@ public class registracijaKnjigeController {
             }
 
             if(!kategorijaComboBox.isPressed() || kategorijaComboBox.getValue() == null) {
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 kategorijaComboBox.setStyle("-fx-background-color: lightpink");
             }
             else{
@@ -177,7 +177,7 @@ public class registracijaKnjigeController {
             }
 
             if(!jezikComboBox.isPressed() || jezikComboBox.getValue() == null){
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 jezikComboBox.setStyle("-fx-background-color: lightpink");
             }
             else {
@@ -186,7 +186,7 @@ public class registracijaKnjigeController {
             }
 
             if(!fontComboBox.isPressed() || fontComboBox.getValue() == null){
-                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena");
+                lblPoruka.setText("Neispravni podaci! Sva polja moraju biti popunjena.");
                 fontComboBox.setStyle("-fx-background-color: lightpink");
             }
             else {
