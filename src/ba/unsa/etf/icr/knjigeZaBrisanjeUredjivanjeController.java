@@ -39,14 +39,17 @@ public class knjigeZaBrisanjeUredjivanjeController {
         columnNaziv.setCellValueFactory(new PropertyValueFactory<>("nazivKnjige"));
         columnAutor.setCellValueFactory(new PropertyValueFactory<>("autor"));
         columnJezik.setCellValueFactory(new PropertyValueFactory<>("jezik"));
+        filtriranjePodataka();
+    }
 
+    public void filtriranjePodataka(){
         ObservableList<Knjiga> listaKnjiga = FXCollections.observableArrayList();
 
-        listaKnjiga.addAll(tblKnjige.getItems());
+        listaKnjiga.addAll(model.getKnjige());
 
-       // ObservableList<Knjiga> listaKnjiga = FXCollections.observableArrayList();
+        // ObservableList<Knjiga> listaKnjiga = FXCollections.observableArrayList();
 
-       // listaKnjiga.addAll(tblKnjige.getItems());
+        // listaKnjiga.addAll(tblKnjige.getItems());
         FilteredList<Knjiga> filteredData = new FilteredList<>(listaKnjiga, p -> true);
 
         // 2. Set the filter Predicate whenever the filter changes.
@@ -156,6 +159,7 @@ public class knjigeZaBrisanjeUredjivanjeController {
                     if(knjiga.equals(tblKnjige.getSelectionModel().getSelectedItem())) knjigaZaRemove = knjiga;
                 }
                model.getKnjige().remove(knjigaZaRemove);
+                filtriranjePodataka();
                 Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
                 alert1.setTitle("Potvrda");
                 alert1.setHeaderText(null);

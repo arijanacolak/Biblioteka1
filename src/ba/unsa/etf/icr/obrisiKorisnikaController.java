@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.Optional;
 
@@ -40,13 +41,16 @@ public class obrisiKorisnikaController {
         columnIme.setCellValueFactory(new PropertyValueFactory<>("ime"));
         columMail.setCellValueFactory(new PropertyValueFactory<>("email"));
 
+        filtriranjePodataka();
+    }
+    public void filtriranjePodataka(){
         ObservableList<Korisnik> listaKnjiga = FXCollections.observableArrayList();
 
-        listaKnjiga.addAll(tableKorisnici.getItems());
+        listaKnjiga.addAll(model.getKorisnici());
 
-      //  ObservableList<Knjiga> listaKnjiga = FXCollections.observableArrayList();
+        //  ObservableList<Knjiga> listaKnjiga = FXCollections.observableArrayList();
 
-       // listaKnjiga.addAll(tableKorisnici.getItems());
+        // listaKnjiga.addAll(tableKorisnici.getItems());
         FilteredList<Korisnik> filteredData = new FilteredList<>(listaKnjiga, p -> true);
 
         // 2. Set the filter Predicate whenever the filter changes.
@@ -143,7 +147,9 @@ public class obrisiKorisnikaController {
                 for (Korisnik x: model.getKorisnici()) {
                     if(x.equals(tableKorisnici.getSelectionModel().getSelectedItem())) korisnik = x;
                 }
+
                 model.getKorisnici().remove(korisnik);
+                filtriranjePodataka();
                 Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
                 alert1.setTitle("Potvrda");
                 alert1.setHeaderText("Korisnik uspješno obrisan.");
