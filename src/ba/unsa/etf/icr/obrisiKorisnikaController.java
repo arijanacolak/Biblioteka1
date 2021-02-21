@@ -28,6 +28,7 @@ public class obrisiKorisnikaController {
     public obrisiKorisnikaController(KorisnikModel model) {
         this.model = model;
     }
+    public obrisiKorisnikaController(){}
 
     public void initialize(){
         tableKorisnici.setItems(model.getKorisnici());
@@ -57,6 +58,7 @@ public class obrisiKorisnikaController {
             podaci.fldIme.setText(tableKorisnici.getSelectionModel().getSelectedItem().getIme());
             podaci.fldPrezime.setText(tableKorisnici.getSelectionModel().getSelectedItem().getPrezime());
             podaci.fldImeRoditelja.setText(tableKorisnici.getSelectionModel().getSelectedItem().getImeRoditelja());
+            podaci.fldEmail.setText(tableKorisnici.getSelectionModel().getSelectedItem().getEmail());
             podaci.fldAdresaPrebivalista.setText(tableKorisnici.getSelectionModel().getSelectedItem().getAdresaPrebivalista());
             podaci.fldJmbg.setText(tableKorisnici.getSelectionModel().getSelectedItem().getJmbg().toString());
             podaci.fldPostanskiBroj.setText(tableKorisnici.getSelectionModel().getSelectedItem().getPostanskiBroj().toString());
@@ -72,8 +74,8 @@ public class obrisiKorisnikaController {
         else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setHeaderText("Niste selektovali knjigu.");
-            alert.setContentText("Da biste otvorili ovaj prozor, potrebno je da selektujete željenu knjigu!");
+            alert.setHeaderText("Niste selektovali korisnika!");
+            alert.setContentText("Potrebno je da selektujete željenog korisnika za ovu vrstu akcije!");
             alert.showAndWait();
         }
 
@@ -89,12 +91,6 @@ public class obrisiKorisnikaController {
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK) {
-                Korisnik korisnik =  new Korisnik();
-                for (Korisnik x: model.getKorisnici()) {
-                    if(tableKorisnici.getSelectionModel().getSelectedItem().equals(x)) korisnik = x;
-                }
-
-                model.getKorisnici().remove(korisnik);
                 Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
                 alert1.setTitle("Potvrda");
                 alert1.setHeaderText("Korisnik uspješno obrisan.");
@@ -142,8 +138,8 @@ public class obrisiKorisnikaController {
         else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setHeaderText("Niste selektovali knjigu.");
-            alert.setContentText("Da biste otvorili ovaj prozor, potrebno je da selektujete željenu knjigu!");
+            alert.setHeaderText("Niste selektovali korisnika!");
+            alert.setContentText("Potrebno je da selektujete željenog korisnika za ovu vrstu akcije!");
             alert.showAndWait();
         }
     }

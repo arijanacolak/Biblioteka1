@@ -24,6 +24,8 @@ public class urediKorisnikaController {
     public ComboBox comboMjestoPrebivalista;
     public TextField fldPostanskiBroj;
 
+
+
     public void initialize(){
         ObservableList<String> listaGradova = FXCollections.observableArrayList();
         listaGradova.addAll("Sarajevo", "Mostar", "Bihać", "Banja Luka");

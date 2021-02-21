@@ -6,7 +6,7 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane fx:id="prozor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.detaljniPrikazPodataka">
+<GridPane fx:id="prozor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.detaljniPrikazPodataka">
     <!--  <stylesheets>
           <URL value="@/css/cssForOwnerController.css" />
       </stylesheets>-->
@@ -56,6 +56,11 @@
                         <Insets left="10.0" top="15.0" />
                     </VBox.margin>
                 </Label>
+            <Label text="E-mail:">
+               <VBox.margin>
+                  <Insets left="10.0" top="15.0" />
+               </VBox.margin>
+            </Label>
                 <Label layoutX="10.0" layoutY="42.0" text="JMBG:">
                     <VBox.margin>
                         <Insets left="10.0" top="15.0" />
@@ -106,10 +111,17 @@
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></TextField>
-                <TextField fx:id="fldJmbg" layoutX="10.0" layoutY="88.0" />
+                <TextField fx:id="fldEmail" layoutX="10.0" layoutY="88.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="fldJmbg" layoutX="10.0" layoutY="110.0">
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin></TextField>
                 <DatePicker fx:id="dateDatumRodjenja">
                     <VBox.margin>
-                        <Insets top="5.0" />
+                        <Insets top="3.0" />
                     </VBox.margin>
                 </DatePicker>
                 <ComboBox fx:id="comboMjestoRodjenja" editable="true" prefWidth="150.0">
@@ -137,24 +149,19 @@
                 <Insets left="-60.0" right="100.0" />
             </GridPane.margin>
         </VBox>
-        <VBox fx:id="traka" minWidth="75.0" prefHeight="362.0" prefWidth="76.0" GridPane.columnIndex="3" GridPane.rowSpan="11">
+        <VBox fx:id="traka" minWidth="75.0" prefHeight="362.0" prefWidth="118.0" GridPane.columnIndex="3" GridPane.rowSpan="11">
             <effect>
                 <InnerShadow color="WHITE" />
             </effect>
             <children>
                 <Button minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="slk">
                     <VBox.margin>
-                        <Insets right="5.0" />
+                        <Insets right="5.0" top="7.0" />
                     </VBox.margin>
                 </Button>
             </children>
             <GridPane.margin>
                 <Insets right="10.0" />
             </GridPane.margin></VBox>
-        <HBox id="tr" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="10">
-            <effect>
-                <InnerShadow color="WHITE" />
-            </effect>
-        </HBox>
     </children>
 </GridPane>

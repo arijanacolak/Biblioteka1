@@ -20,6 +20,7 @@ public class detaljniPrikazPodataka {
     public ComboBox comboMjestoPrebivalista;
     public TextField fldPostanskiBroj;
     public Button btnNazad;
+    public TextField fldEmail;
 
     public detaljniPrikazPodataka(){
 
