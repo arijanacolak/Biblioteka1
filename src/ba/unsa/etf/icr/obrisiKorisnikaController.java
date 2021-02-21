@@ -18,6 +18,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class obrisiKorisnikaController {
     public Button btnNazad;
+    public Button btnUrediPodatke;
     public Button btnDetaljniPrikazPodatakaOKorisniku;
     public TableView<Korisnik> tableKorisnici;
     public TableColumn columnId;
@@ -105,6 +106,25 @@ public class obrisiKorisnikaController {
             } else {
                 alert.close();
             }
+        }
+        else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Niste selektovali korisnika!");
+            alert.setContentText("Potrebno je da selektujete željenog korisnika za ovu vrstu akcije!");
+            alert.showAndWait();
+        }
+    }
+
+    public void urediPodatkeAction(ActionEvent event) throws IOException {
+        if (tableKorisnici.getSelectionModel().getSelectedItem() != null) {
+            Stage myStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/urediKorisnika.fxml"));
+            Parent root = loader.load();
+            myStage.setTitle("Uredite podatke o korisniku");
+            myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            myStage.setResizable(false);
+            myStage.showAndWait();
         }
         else{
             Alert alert = new Alert(Alert.AlertType.ERROR);

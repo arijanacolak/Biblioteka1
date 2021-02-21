@@ -102,6 +102,11 @@
                   <Insets left="40.0" />
                </VBox.margin>
             </Button>
+            <Button fx:id="btnUrediPodatke" mnemonicParsing="false" onAction="#urediPodatkeAction" prefHeight="32.0" prefWidth="180.0" text="Uredite podatke">
+               <VBox.margin>
+                  <Insets left="40.0" top="20.0" />
+               </VBox.margin>
+            </Button>
             <Button mnemonicParsing="false" onAction="#obrisiKorisnikaAction" prefHeight="32.0" prefWidth="180.0" text="Obriši korisnika">
                <VBox.margin>
                   <Insets left="40.0" top="20.0" />

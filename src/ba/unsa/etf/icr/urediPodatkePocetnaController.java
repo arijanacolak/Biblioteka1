@@ -14,7 +14,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 public class urediPodatkePocetnaController {
 
     public Button btnNazad;
-
+/*
     public void urediPodatkeOKorisniku(ActionEvent actionEvent) throws IOException {
         Stage myStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/urediKorisnika.fxml"));
@@ -24,7 +24,7 @@ public class urediPodatkePocetnaController {
         myStage.setResizable(false);
         myStage.showAndWait();
     }
-
+*/
     public void urediPodatkeOKnjizi(ActionEvent actionEvent) throws IOException {
         KnjigeModel model = new KnjigeModel();
         model.napuni();
@@ -54,7 +54,7 @@ public class urediPodatkePocetnaController {
         myStage.setResizable(false);
         myStage.showAndWait();
     }
-
+/*
     public void obrisiKnjigu(ActionEvent actionEvent) throws IOException {
         KnjigeModel model = new KnjigeModel();
         model.napuni();
@@ -68,7 +68,7 @@ public class urediPodatkePocetnaController {
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
-    }
+    }*/
 
     public void nazad(ActionEvent actionEvent) {
         ((Stage) btnNazad.getScene().getWindow()).close();
