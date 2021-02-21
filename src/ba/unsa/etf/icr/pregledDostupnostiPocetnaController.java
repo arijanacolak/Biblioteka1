@@ -8,10 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -109,15 +106,24 @@ public class pregledDostupnostiPocetnaController {
     }
 
     public void zaduziKnjigu(ActionEvent actionEvent) throws IOException {
-        Stage myStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/zaduzenje_knjige.fxml"));
-        Parent root = loader.load();
-        zaduzenjeKnjigeController noviprozor = loader.getController();
-        noviprozor.podaciFld.setText("Ime i prezime: Neko Nekić\nAdresa stanovanja: Nepoznata bb\nE-mail: neko.nekic@gmail.com\nTrenutno selektovana knjiga: " + tblKnjige.getSelectionModel().getSelectedItem().toString() + "\nImate pravo zadužiti još jednu knjigu!\n\nPrethodno zaduženu knjigu je potrebno vratiti za 5 dana!");
-        myStage.setTitle("Zaduzenje knjige");
-        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        myStage.setResizable(false);
-        myStage.showAndWait();
+        if(tblKnjige.getSelectionModel().getSelectedItem() != null) {
+            Stage myStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/zaduzenje_knjige.fxml"));
+            Parent root = loader.load();
+            zaduzenjeKnjigeController noviprozor = loader.getController();
+            noviprozor.podaciFld.setText("Ime i prezime: Neko Nekić\nAdresa stanovanja: Nepoznata bb\nE-mail: neko.nekic@gmail.com\nTrenutno selektovana knjiga: " + tblKnjige.getSelectionModel().getSelectedItem().toString() + "\nImate pravo zadužiti još jednu knjigu!\n\nPrethodno zaduženu knjigu je potrebno vratiti za 5 dana!");
+            myStage.setTitle("Zaduzenje knjige");
+            myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            myStage.setResizable(false);
+            myStage.showAndWait();
+        }
+        else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Niste selektovali knjigu!");
+            alert.setContentText("Potrebno je da selektujete željenu knjigu za ovu vrstu akcije!");
+            alert.showAndWait();
+        }
     }
 
     public void pretragaPoJeziku(ActionEvent actionEvent) {
