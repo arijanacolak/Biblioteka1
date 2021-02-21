@@ -139,6 +139,11 @@ public class obrisiKorisnikaController {
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK) {
+                Korisnik korisnik = new Korisnik();
+                for (Korisnik x: model.getKorisnici()) {
+                    if(x.equals(tableKorisnici.getSelectionModel().getSelectedItem())) korisnik = x;
+                }
+                model.getKorisnici().remove(korisnik);
                 Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
                 alert1.setTitle("Potvrda");
                 alert1.setHeaderText("Korisnik uspješno obrisan.");

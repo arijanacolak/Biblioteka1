@@ -8,10 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -112,28 +109,44 @@ public class odabirKnjigeController {
     }
 
     public void zaduziKnjigu(ActionEvent actionEvent) throws IOException {
-        Stage myStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/zaduzenje_knjige.fxml"));
-        Parent root = loader.load();
-        zaduzenjeKnjigeController noviprozor = loader.getController();
-        noviprozor.podaciFld.setText("Ime i prezime: Neko Nekić\nAdresa stanovanja: Nepoznata bb\nE-mail: neko.nekic@gmail.com\nTrenutno selektovana knjiga: " + tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige() + "\nImate pravo zadužiti još jednu knjigu!\n\nPrethodno zaduženu knjigu je potrebno vratiti za 5 dana!");
-        myStage.setTitle("Zaduzenje knjige");
-        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        myStage.setResizable(false);
-        myStage.showAndWait();
+        if(tblKnjige.getSelectionModel().getSelectedItem() != null) {
+            Stage myStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/zaduzenje_knjige.fxml"));
+            Parent root = loader.load();
+            zaduzenjeKnjigeController noviprozor = loader.getController();
+            noviprozor.podaciFld.setText("Ime i prezime: Neko Nekić\nAdresa stanovanja: Nepoznata bb\nE-mail: neko.nekic@gmail.com\nTrenutno selektovana knjiga: " + tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige() + "\nImate pravo zadužiti još jednu knjigu!\n\nPrethodno zaduženu knjigu je potrebno vratiti za 5 dana!");
+            myStage.setTitle("Zaduzenje knjige");
+            myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            myStage.setResizable(false);
+            myStage.showAndWait();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Niste selektovali knjigu!");
+            alert.setContentText("Potrebno je da selektujete željenu knjigu za ovu vrstu akcije!");
+            alert.showAndWait();
+        }
 
     }
 
     public void provjeraDostupnostiKnjige(ActionEvent actionEvent) throws IOException {
-        Stage myStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledDostupnosti.fxml"));
-        Parent root = loader.load();
-        pregledDostupnostiController noviprozor = loader.getController();
-        noviprozor.lokacijaKnjigeTxtArea.setText(" Knjiga koju ste odabrali \n ("+ tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige() + ") nalazi se\n na drugom spratu, polica B2.\n Ugodno čitanje!");
-        myStage.setTitle("Pregled dostupnosti");
-        myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        myStage.setResizable(false);
-        myStage.showAndWait();
+        if(tblKnjige.getSelectionModel().getSelectedItem() != null) {
+            Stage myStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledDostupnosti.fxml"));
+            Parent root = loader.load();
+            pregledDostupnostiController noviprozor = loader.getController();
+            noviprozor.lokacijaKnjigeTxtArea.setText(" Knjiga koju ste odabrali \n (" + tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige() + ") nalazi se\n na drugom spratu, polica B2.\n Ugodno čitanje!");
+            myStage.setTitle("Pregled dostupnosti");
+            myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            myStage.setResizable(false);
+            myStage.showAndWait();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Niste selektovali knjigu!");
+            alert.setContentText("Potrebno je da selektujete željenu knjigu za ovu vrstu akcije!");
+            alert.showAndWait();
+        }
     }
 
     public void openPrevious(ActionEvent actionEvent) {
@@ -141,29 +154,46 @@ public class odabirKnjigeController {
     }
 
     public void pregledDetaljaOKnjigama(ActionEvent actionEvent) throws IOException {
-        Stage myStage = new Stage();
+        if(tblKnjige.getSelectionModel().getSelectedItem() != null) {
+            Stage myStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/detaljiOKnjizi.fxml"));
         Parent root = loader.load();
         detaljiOKnjiziController noviprozor = loader.getController();
-        noviprozor.nazivKnjigeLabela.setText(" Naziv knjige: "+ tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige());
+        noviprozor.nazivKnjigeLabela.setText(" Naziv knjige: " + tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige());
         noviprozor.autorLabela.setText(" Autor: " + tblKnjige.getSelectionModel().getSelectedItem().getAutor());
         myStage.setTitle("Pregled detalja");
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
+    } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Niste selektovali knjigu!");
+            alert.setContentText("Potrebno je da selektujete željenu knjigu za ovu vrstu akcije!");
+            alert.showAndWait();
+        }
     }
 
     public void pregledRecenzija(ActionEvent actionEvent) throws IOException {
-        Stage myStage = new Stage();
+        if(tblKnjige.getSelectionModel().getSelectedItem() != null) {
+
+            Stage myStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregledRecenzija.fxml"));
         Parent root = loader.load();
         recenzijeController noviprozor = loader.getController();
-        noviprozor.nazivLabela.setText(" Naziv knjige: "+ tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige());
+        noviprozor.nazivLabela.setText(" Naziv knjige: " + tblKnjige.getSelectionModel().getSelectedItem().getNazivKnjige());
         noviprozor.autorLabela.setText(" Autor: " + tblKnjige.getSelectionModel().getSelectedItem().getAutor());
         myStage.setTitle("Pregled recenzija");
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
+    } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Niste selektovali knjigu!");
+            alert.setContentText("Potrebno je da selektujete željenu knjigu za ovu vrstu akcije!");
+            alert.showAndWait();
+        }
     }
 
     public void pretragaPoNazivu(ActionEvent actionEvent) {

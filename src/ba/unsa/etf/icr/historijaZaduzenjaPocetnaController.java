@@ -10,7 +10,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class historijaZaduzenjaPocetnaController {
-    public TableView tblKorisnici;
+    public TableView tblKnjige;
     public TableColumn columnNaziv;
     public TableColumn columnJezik;
     public TableColumn columnAutor;
@@ -23,18 +23,18 @@ public class historijaZaduzenjaPocetnaController {
     public historijaZaduzenjaPocetnaController(){}
 
     public void initialize() {
-        tblKorisnici.setItems(model.getKorisnici());
+        tblKnjige.setItems(model.getKorisnici());
         columnNaziv.setCellValueFactory(new PropertyValueFactory<>("ime"));
         columnAutor.setCellValueFactory(new PropertyValueFactory<>("prezime"));
         columnJezik.setCellValueFactory(new PropertyValueFactory<>("email"));
 
         ObservableList<Korisnik> listaKnjiga = FXCollections.observableArrayList();
 
-        listaKnjiga.addAll(tblKorisnici.getItems());
+        listaKnjiga.addAll(tblKnjige.getItems());
     }
-  /*  public void openPrevious(ActionEvent actionEvent) {
+    public void openPrevious(ActionEvent actionEvent) {
         ((Stage) btnNazad.getScene().getWindow()).close();
-    }*/
+    }
 
     /*public void zatvori(ActionEvent actionEvent) {
         ((Stage) btnNazad1.getScene().getWindow()).close();
