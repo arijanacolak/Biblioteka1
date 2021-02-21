@@ -3,11 +3,24 @@ package ba.unsa.etf.icr;
 import java.time.LocalDate;
 
 public class Korisnik {
-    private String ime, prezime, email, imeRoditelja, adresaPrebivalista, mjestoRodjenja, mjestoPrebivalista;
+    private String ime, prezime, email, imeRoditelja, adresaPrebivalista, mjestoRodjenja, mjestoPrebivalista, prethodnoZaduzenaKnjige1,prethodnoZaduzenaKnjige2, trenutnoZaduzeneKnjige;
+    private String datumZaduzenja, datumVracanja;
     private Integer jmbg, postanskiBroj, id;
     private LocalDate datumRodjenja;
 
     public Korisnik() {}
+
+    public Korisnik(String ime, String prezime, String email, String adresaPrebivalista, String prethodnoZaduzenaKnjige1, String prethodnoZaduzenaKnjige2, String trenutnoZaduzeneKnjige, String datumZaduzenja, String datumVracanja) {
+        this.ime = ime;
+        this.prezime = prezime;
+        this.email = email;
+        this.adresaPrebivalista = adresaPrebivalista;
+        this.prethodnoZaduzenaKnjige1 = prethodnoZaduzenaKnjige1;
+        this.prethodnoZaduzenaKnjige2 = prethodnoZaduzenaKnjige2;
+        this.trenutnoZaduzeneKnjige = trenutnoZaduzeneKnjige;
+        this.datumZaduzenja = datumZaduzenja;
+        this.datumVracanja = datumVracanja;
+    }
 
     public Korisnik(Integer id, String ime, String prezime, String email, String imeRoditelja, String adresaPrebivalista, String mjestoRodjenja, String mjestoPrebivalista, Integer jmbg, Integer postanskiBroj, LocalDate datumRodjenja) {
         this.id = id;
@@ -122,5 +135,45 @@ public class Korisnik {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getPrethodnoZaduzenaKnjige1() {
+        return prethodnoZaduzenaKnjige1;
+    }
+
+    public void setPrethodnoZaduzenaKnjige1(String prethodnoZaduzenaKnjige1) {
+        this.prethodnoZaduzenaKnjige1 = prethodnoZaduzenaKnjige1;
+    }
+
+    public String getPrethodnoZaduzenaKnjige2() {
+        return prethodnoZaduzenaKnjige2;
+    }
+
+    public void setPrethodnoZaduzenaKnjige2(String prethodnoZaduzenaKnjige2) {
+        this.prethodnoZaduzenaKnjige2 = prethodnoZaduzenaKnjige2;
+    }
+
+    public String getTrenutnoZaduzeneKnjige() {
+        return trenutnoZaduzeneKnjige;
+    }
+
+    public void setTrenutnoZaduzeneKnjige(String trenutnoZaduzeneKnjige) {
+        this.trenutnoZaduzeneKnjige = trenutnoZaduzeneKnjige;
+    }
+
+    public String getDatumZaduzenja() {
+        return datumZaduzenja;
+    }
+
+    public void setDatumZaduzenja(String datumZaduzenja) {
+        this.datumZaduzenja = datumZaduzenja;
+    }
+
+    public String getDatumVracanja() {
+        return datumVracanja;
+    }
+
+    public void setDatumVracanja(String datumVracanja) {
+        this.datumVracanja = datumVracanja;
     }
 }

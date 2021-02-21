@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 
 public class KorisnikModel {
     private ObservableList<Korisnik> korisnici = FXCollections.observableArrayList();
+    private ObservableList<Korisnik> korisniciHistorija = FXCollections.observableArrayList();
     private SimpleObjectProperty<Korisnik> trenutniKorisnik = new SimpleObjectProperty<>();
 
     public KorisnikModel() {
@@ -23,6 +24,13 @@ public class KorisnikModel {
 
 
         trenutniKorisnik.set(null);
+
+    }
+
+    public void napuniZaHistoriju(){
+        korisniciHistorija.add(new Korisnik("Ime1", "Prezime1", "ime1@etf.unsa.ba", "Adresa1 bb", "Stepski Vuk", "Tvrđava", "Derviš i smrt", "19/02/2021", "05/03/2021"));
+        korisniciHistorija.add(new Korisnik("Ime2", "Prezime2", "ime2@etf.unsa.ba", "Adresa2 bb", "Stepski Vuk", "Legenda o Ali-paši", "Hamlet", "16/02/2021", "02/03/2021"));
+        korisniciHistorija.add(new Korisnik("Ime3", "Prezime3", "ime3@etf.unsa.ba", "Adresa3 bb", "Roman o Ajvazu", "", "Madame Bovary", "10/02/2021", "25/02/2021"));
 
     }
 
