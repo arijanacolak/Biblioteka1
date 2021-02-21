@@ -12,7 +12,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Optional;
@@ -27,8 +26,8 @@ public class obrisiKorisnikaController {
     public TableColumn columnId;
     public TableColumn columnIme;
     public TableColumn columMail;
-    public TextField fldPretragaPoID;
-    public TextField fldPretragaPoImenu;
+    public TextField pretragaPoID;
+    public TextField pretragaPoImenu;
     private KorisnikModel model;
     public obrisiKorisnikaController(KorisnikModel model) {
         this.model = model;
@@ -51,7 +50,7 @@ public class obrisiKorisnikaController {
         FilteredList<Korisnik> filteredData = new FilteredList<>(listaKnjiga, p -> true);
 
         // 2. Set the filter Predicate whenever the filter changes.
-        fldPretragaPoID.textProperty().addListener((observable, oldValue, newValue) -> {
+        pretragaPoID.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(myObject -> {
                 // If filter text is empty, display all persons.
                 if (newValue == null || newValue.isEmpty()) {
@@ -68,7 +67,7 @@ public class obrisiKorisnikaController {
             });
         });
 
-        fldPretragaPoImenu.textProperty().addListener((observable, oldValue, newValue) -> {
+        pretragaPoImenu.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(myObject -> {
                 // If filter text is empty, display all persons.
                 if (newValue == null || newValue.isEmpty()) {

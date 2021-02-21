@@ -55,7 +55,7 @@
       <Button fx:id="registracijaKnjigeBtn" mnemonicParsing="false" onAction="#registracijaKnjige" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Registracija knjige" GridPane.columnIndex="4" GridPane.rowIndex="10" />
       <Button fx:id="odabirKnjigeBtn" mnemonicParsing="false" onAction="#openBooks" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Odabir knjige" GridPane.columnIndex="4" GridPane.rowIndex="11" />
       <Button fx:id="provjeraDostupnostiKnjigeBtn" onAction="#provjeraDostupnostiAction" mnemonicParsing="false" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Provjera dostupnosti knjige" GridPane.columnIndex="4" GridPane.rowIndex="12" />
-      <Button fx:id="provjeraHistorijeZaduzenjaBtn" mnemonicParsing="false" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Provjera historije zaduženja" GridPane.columnIndex="4" GridPane.rowIndex="13" />
+      <Button fx:id="provjeraHistorijeZaduzenjaBtn" onAction="#historijaZaduzenjaAction" mnemonicParsing="false" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Provjera historije zaduženja" GridPane.columnIndex="4" GridPane.rowIndex="13" />
       <Button fx:id="urediPodatkeBtn" mnemonicParsing="false" onAction="#urediPodatke" prefHeight="36.0" prefWidth="299.0" styleClass="dugmici" text="Uredi podatke " GridPane.columnIndex="4" GridPane.rowIndex="14" />
       <Button id="d" fx:id="nazadBtn" mnemonicParsing="false" onAction="#openPrevious" prefHeight="36.0" prefWidth="80.0" text="Nazad" GridPane.columnIndex="1" GridPane.rowIndex="15" />
       <Button id="slika" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.rowSpan="6">
