@@ -63,7 +63,7 @@
          <GridPane.margin>
             <Insets bottom="50.0" left="50.0" />
          </GridPane.margin></Button>
-      <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="upitnik" GridPane.columnIndex="4" GridPane.rowIndex="16">
+      <Button fx:id="upitnikBtn" onAction="#infoAction" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="upitnik" GridPane.columnIndex="4" GridPane.rowIndex="16">
          <GridPane.margin>
             <Insets left="260.0" />
          </GridPane.margin>

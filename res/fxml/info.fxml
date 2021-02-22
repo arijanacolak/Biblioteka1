@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<?import java.net.URL?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.infoController">
+   <stylesheets>
+      <URL value="@/biblioteka.css" />
+   </stylesheets>
+   <children>
+      <Hyperlink fx:id="link" layoutX="74.0" layoutY="318.0" onAction="#linkAction" prefHeight="24.0" prefWidth="342.0" text="Biblioteka app" />
+      <GridPane layoutX="8.0" layoutY="3.0" prefHeight="278.0" prefWidth="585.0">
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" />
+            <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="68.0" />
+            <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="28.0" />
+            <RowConstraints maxHeight="60.0" minHeight="7.0" prefHeight="27.0" />
+            <RowConstraints maxHeight="29.0" minHeight="0.0" prefHeight="29.0" />
+            <RowConstraints maxHeight="24.0" minHeight="0.0" prefHeight="0.0" />
+         </rowConstraints>
+         <columnConstraints>
+            <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints maxWidth="266.0" minWidth="10.0" prefWidth="266.0" />
+            <ColumnConstraints maxWidth="94.0" minWidth="0.0" prefWidth="0.0" />
+            <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <children>
+            <ImageView fx:id="imgAbout" fitHeight="173.0" fitWidth="331.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="120.0" right="20.0" top="15.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../img/librarynew.png" />
+               </image>
+            </ImageView>
+            <Label text="Naziv programa:" GridPane.columnSpan="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="Naziv autora:" GridPane.columnSpan="2" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Biblioteka" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+            <Label prefHeight="17.0" prefWidth="268.0" text="Arijana Čolak, Ajla Habib, Amira Kurtagić" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Label prefHeight="25.0" prefWidth="83.0" text="Verzija:" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="158.0" text="2021" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <Button id="d" fx:id="btnNazad" onAction="#zatvoriAction" layoutX="22.0" layoutY="359.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="80.0" text="Nazad" />
+      <Label fx:id="labelaInfo" layoutX="74.0" layoutY="288.0" prefHeight="30.0" prefWidth="426.0" text="Uputstva za upotrebu aplikacije možete pogledati na sljedećem linku:" />
+   </children>
+</AnchorPane>

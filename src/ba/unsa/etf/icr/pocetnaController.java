@@ -7,7 +7,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -19,11 +23,6 @@ public class pocetnaController {
     public Button provjeraHistorijeZaduzenjaBtn;
     public Button urediPodatkeBtn;
     public Button nazadBtn;
-
-    /*private KnjigeModel model;
-    public odabirKnjigeController(KnjigeModel model) {
-        this.model = model;
-    }*/
 
     public void registracijaKorisnika(ActionEvent actionEvent) throws IOException {
         Stage myStage = new Stage();
@@ -102,14 +101,16 @@ public class pocetnaController {
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
         myStage.showAndWait();
+    }
 
-        /*
+    public void infoAction(ActionEvent actionEvent) throws IOException {
         Stage myStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/provjeraHistorijeZaduzenja.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/info.fxml"));
         Parent root = loader.load();
-        myStage.setTitle("Historija");
+        myStage.setTitle("Informacije");
         myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         myStage.setResizable(false);
-        myStage.showAndWait();*/
+        myStage.showAndWait();
     }
 }
+
