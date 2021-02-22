@@ -138,7 +138,7 @@
                   <InnerShadow color="WHITE" />
                </effect>
                <children>
-                  <Button minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="slk">
+                  <Button cacheShape="false" centerShape="false" focusTraversable="false" minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" scaleShape="false" styleClass="slk">
                      <VBox.margin>
                         <Insets right="5.0" top="5.0" />
                      </VBox.margin>

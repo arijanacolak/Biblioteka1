@@ -38,19 +38,19 @@
    <children>
       <VBox minHeight="270.0" prefHeight="294.0" prefWidth="524.0" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="2" GridPane.rowSpan="8">
          <children>
-            <Label prefHeight="65.0" prefWidth="478.0" styleClass="labela" text="Zaduženje knjige:">
+            <Label minHeight="50.0" prefHeight="42.0" prefWidth="478.0" styleClass="labela" text="Zaduženje knjige:">
                <padding>
-                  <Insets left="15.0" top="10.0" />
+                  <Insets left="15.0" />
                </padding>
-               <font>
-                  <Font size="20.0" />
-               </font>
                <effect>
                   <InnerShadow color="WHITE" />
                </effect>
                <VBox.margin>
                   <Insets left="20.0" />
                </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
             </Label>
             <HBox prefHeight="51.0" prefWidth="256.0">
                <VBox.margin>

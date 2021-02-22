@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.ScrollBar?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.text.Font?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.detaljiOKnjiziController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.icr.detaljiOKnjiziController">
     <stylesheets>
         <URL value="@/biblioteka.css" />
     </stylesheets>
@@ -111,7 +104,7 @@
          <children>
             <VBox>
                <children>
-                  <Button minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="slk">
+                  <Button cacheShape="false" centerShape="false" focusTraversable="false" minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" scaleShape="false" styleClass="slk">
                      <VBox.margin>
                         <Insets left="35.0" right="5.0" />
                      </VBox.margin>
